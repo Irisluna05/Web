@@ -19,7 +19,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Iris Heemskerk
 
   #### Je startniveau:
-  Blauw
+ Rood
 
   #### Je focus:
   Responsive
@@ -39,12 +39,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  Home pagina
+  <img src="readme-images/IMG_4193.jpg" width="375px" alt="Homepagina">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  Kerst pagina  
+  <img src="readme-images/IMG_4195 2.jpg" width="375px" alt="Kerstcollectie">
  
 </details>
 
