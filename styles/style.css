@@ -5,27 +5,96 @@
   box-sizing:border-box;  
 }
 
-
-
-
-
+@font-face {
+    font-family: 'IntroScriptMedium';
+    src: url('fonts/IntroScriptMedium.woff2') format('woff2'),
+         url('fonts/IntroScriptMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
 
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
 	/* startje */
-	--color-text:#111;
+	--color-primary: #1D1D1B;
+	--color-header: #B19144;
 	--color-background:#eee;
+	--global-color: #F3E7D4;
+	--global-color2: #D4DC91;
 }
-
-
-
 
 
 /****************/
 /* JOUW STYLING */
 /****************/
 
-/* jouw code */
+ul{
+	font-family: "Alata",Sans-serif;
+	list-style: none;
+}
 
+p{
+	font-family: "Alata",Sans-serif;
+}
+
+h2{
+	box-sizing: border-box;
+color: rgb(177, 145, 68);
+display: inline;
+font-family: "IntroScriptMedium", sans-serif;
+font-size: 35px;
+font-weight: 500;
+height: auto;
+line-height: 40.25px;
+text-align: center;
+text-transform: lowercase;
+width: auto;
+}
+
+h3{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--color-header)
+}
+
+body {
+	background-color: var(--global-color);
+	text-align: left;
+	align-items: center;
+box-sizing: border-box;
+	}
+
+
+		
+
+footer{
+	justify-content: flex-start;
+display: flex;
+flex-direction: column;
+background-color: #c5b9ac;
+border-style: none;
+border-width: 1px;
+border-radius: 0;
+margin: 0;
+padding: 0 10px 30px;
+}
+
+
+/* Hamburger menu, mobiel */
+
+@media (max-width:768px){
+.Ham-open{
+background-color: #f2f2f2;
+border: solid #e6e6e6;
+border-width: 0 0 1px 1px;
+box-sizing: border-box;
+float: left;
+height: 71px;
+padding-top: 24px;
+text-align: center;
+width: 33.33%;
+}
+}
