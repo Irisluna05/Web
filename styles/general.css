@@ -1,0 +1,112 @@
+/**************/
+/* General styling */
+/**************/
+
+*, *::after, *::before {
+    box-sizing:border-box;  
+  }
+
+  @font-face {
+      font-family: 'IntroScriptMedium';
+      src: url('/fonts/IntroScriptMedium.woff2') format('woff2');
+      font-weight: 500;
+      font-style: normal;
+  }
+  
+  /*********************/
+  /* CUSTOM PROPERTIES */
+  /*********************/
+  :root {
+      /* startje */
+      --color-primary: #1D1D1B;
+      --color-header: #B19144;
+      --color-background:#ffffff;
+      --global-color: #F3E7D4;
+      --global-back: #f8f2e9;
+      --global-color2: #D4DC91;
+      --color-button-text:#fff;
+  
+  }
+
+header{
+	display: flex;
+	justify-content: space-between;
+}
+
+header img{
+	justify-content: left;
+	align-items: center;
+	width: 130px;
+	margin: 5px;
+}
+
+nav ul{
+	display:fixed;
+    gap: 50%;
+	top:0;
+	bottom:0;
+	right:0;
+	left:0;
+    translate:-105%;
+    background-color: var(--global-color)
+}
+
+nav li:hover{
+    color: white;
+    background-color: peachpuff;
+
+}
+nav.toonMenu ul {
+    translate:30%;
+}
+
+
+/*links op de pagina het menu*/
+nav{
+	order:-1;
+}
+
+.streepjes{
+	justify-content: right;
+	width: 130px;
+	padding: 10px;
+}
+
+/*Hierdoor blijft de button op de juiste positie.*/
+.streepjes{
+  position:relative;
+  z-index:1;
+  
+}
+
+
+body {
+	background-color: var(--global-back);
+	align-items: center;
+box-sizing: border-box;
+	}
+
+    @media (min-width:65em) {
+        nav {
+          order:0;
+        }
+    
+        .streepjes{
+            display:none;
+        }
+        
+        nav button {
+          display:none;
+        }
+        
+        nav ul {
+          translate:unset;
+          position:static;
+          background:none;
+          padding:0;
+          display:flex;
+          flex-wrap:nowrap;
+          gap:2em;
+        }
+    
+    }
