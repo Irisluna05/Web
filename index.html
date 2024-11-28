@@ -13,27 +13,55 @@
 		rel="stylesheet">
 	<link href="styles/style.css" rel="stylesheet">
 	<link href="styles/general.css" rel="stylesheet">
-	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+	<link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 
 <body>
 	<header>
 		<img src="https://www.ijssalondehoop.nl/wp-content/uploads/2021/11/Logi-De-Hoop-zwart-goud.svg"
-			alt="IJssalon De Hoop logo" class="raven-site-logo-desktop raven-site-logo-tablet raven-site-logo-mobile"
-			data-no-lazy="1">
+			alt="IJssalon De Hoop logo">
+
+		<!-- Nav voor kleine schermen-->
 		<nav>
 			<ul>
-				<li>Home</li>
-				<li>Ons ijs</li>
-				<li>Webshop</li>
-				<li>Openingstijden</li>
-				<li>Ons verhaal</li>
-				<li>Duurzaam</li>
-				<li>Vacature</li>
-				<li>Contact</li>
+				<li><a href="">Home</a></li>
+				<li><a href="">Ons ijs</a></li>
+				<li><a href="">Webshop</a></li>
+				<li><a href="">Openingstijden</a></li>
+				<li><a href="">Ons verhaal</a></li>
+				<li><a href="">Duurzaam</a></li>
+				<li><a href="">Vacature</a></li>
+				<li><a href="">Contact</a></li>
 			</ul>
 		</nav>
 
+		<!-- Nav voor grotere schermen-->
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li>
+					<details>
+						<summary>Ons ijs</summary>
+						<ul>
+							<li><a href="">Schepijs</a></li>
+							<li><a href="">Ijstaarten</a></li>
+							<li><a href="">Coupes</a></li>
+							<li><a href="">Ijskarren</a></li>
+						</ul>
+					</details>
+				</li>
+				<li><a href="">Webshop</a></li>
+				<li><a href="">Openingstijden</a></li>
+				<li><img src="https://www.ijssalondehoop.nl/wp-content/uploads/2021/11/Logi-De-Hoop-zwart-goud.svg"
+						alt="IJssalon De Hoop logo"></li>
+				<li><a href="">Ons verhaal</a></li>
+				<li><a href="">Duurzaam</a></li>
+				<li><a href="">Vacature</a></li>
+				<li><a href="">Contact</a></li>
+			</ul>
+		</nav>
+
+		<h1>Ijssalon De hoop</h1>
 		<!--Deze div is noodzakelijk voor het hamburger menu met streepjes die bewegen.-->
 		<div class="streepjes">
 			<ul>
@@ -50,8 +78,10 @@
 
 
 	<main>
+		<!--Eerste section (wrapper) voor de slider-->
+		<section>
+			<h2>Carousel</h2>
 
-		<section class="slider">
 			<ul>
 				<li><img src="images/Slide-1.jpeg" alt="Foto van de winkel"></li>
 				<li><img src="images/Slide-2.jpg" alt="Foto van schepijs"></li>
@@ -59,65 +89,62 @@
 				<li><img src="images/Slide-4.jpg" alt="Foto kraan"></li>
 				<li><img src="images/Slide-5.jpg" alt="Foto van terras"></li>
 			</ul>
+
+			<button><img src="images/prev2.png" alt="Vorige knop"></button>
+			<button><img src="images/next2.png" alt="Volgende knop"></button>
 		</section>
 
-		<div class="wrapper">
-
-			<div class="item">
+		<!--Derde (wrapper) section-->
+		<section>
+			<article>
 				<h2>schepijs</h2>
-				<img decoding="async" width="152" height="197"
-					src="https://www.ijssalondehoop.nl/wp-content/uploads/2021/12/Schepijs.svg" alt="0">
+				<img src="https://www.ijssalondehoop.nl/wp-content/uploads/2021/12/Schepijs.svg" alt="0">
 				<!--gekopieerd van website-->
 				<p>Wij verkopen dagelijks vers en ambachtelijk bereid ijs. 38 standaard smaken en wisselend 2 smaken van
 					de
 					dag.</p>
-				<span></span>
 				<p>Meer Lezen</p>
-			</div>
+			</article>
 
 
-			<div class="item">
+			<article>
 				<h2>Coupes</h2>
-				<img decoding="async" width="152" height="197"
-					src="https://www.ijssalondehoop.nl/wp-content/uploads/2021/12/Coupes.svg" alt="0">
+				<img src="https://www.ijssalondehoop.nl/wp-content/uploads/2021/12/Coupes.svg" alt="0">
 				<!--gekopieerd van website-->
 				<p>Van onze traditionele Dame Blanche tot tropische verrassingen als Coupe Cointreau met
 					bloedsinaasappelijs, mandarijntjes en slagroom.</p>
-				<span></span>
 				<p>Meer Lezen</p>
-			</div>
+			</article>
 
-			<div class="item">
+			<article>
 				<h2>IJstaarten</h2>
-				<img decoding="async" width="152" height="197"
-					src="https://www.ijssalondehoop.nl/wp-content/uploads/2021/12/ijstaarten.svg" alt="0">
+				<img src="https://www.ijssalondehoop.nl/wp-content/uploads/2021/12/ijstaarten.svg" alt="0">
 				<!--gekopieerd van website-->
 				<p>Verjaardag, bruiloft, Kerst of Pasen, met onze ambachtelijke ijstaarten maak je van elke feestelijke
 					dag
 					een ijsfeest.</p>
-				<span></span>
 				<p>Meer Lezen</p>
-			</div>
+			</article>
 
-			<div class="item">
+			<article>
 				<h2>IJskarren</h2>
-				<img loading="lazy" decoding="async" width="152" height="197"
-					src="https://www.ijssalondehoop.nl/wp-content/uploads/2021/12/ijskarren.svg" alt="0">
+				<img src="https://www.ijssalondehoop.nl/wp-content/uploads/2021/12/ijskarren.svg" alt="0">
 				<!--gekopieerd van website-->
 				<p>De hoop op locatie? Ook op jouw tuinfeest, verjaardag, kinderpartijtje, bruiloft of personeelsfeest
 					zijn
 					wij ijskoud de lekkerste!.</p>
-				<span></span>
 				<p>Meer Lezen</p>
-			</div>
+			</article>
 
-		</div>
+		</section>
 
 		<!--https://www.youtube.com/watch?v=br-0i3U1VCA voor grid-->
+		<!--Derde section-->
 
-		<section class="groen">
+		<section>
+			<h2>groen</h2>
 			<img src="images/Luifel-repeater.svg" alt="0">
-			<h3>Volg ons</h3>
+			<h2>Volg ons</h2>
 			<div>Dat vinden we leuk... #ijssalondehoop</div>
 
 
@@ -169,14 +196,6 @@
 				SVH Meester IJsbereider.</p>
 			<span></span>
 			<p>Meer Lezen</p>
-
-
-
-
-
-
-
-
 		</section>
 
 
@@ -186,10 +205,11 @@
 		<h4>Contact</h4>
 		<p>De lekkerste en mooiste Ijssalon van Gooi </p>
 		<img src="images/505A0FF8-7CE6-4094-B1CE-0A4478010C67.jpeg" alt="0">
+		<section>
+			<p>Al meer dan 100 jaar een begrip in t'gooi en omstreeks</p>
+		</section>
 	</footer>
-	<section>
-		<p>Al meer dan 100 jaar een begrip in t'gooi en omstreeks</p>
-	</section>
+
 	<script defer src="scripts/script.js"></script>
 </body>
 

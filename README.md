@@ -106,6 +106,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
+   <img src="readme-images/process.png" width="375px" alt="css code">
+   <img src="readme-images/process2.png" width="375px" alt="html weergave">
+    <img src="readme-images/navnu.png" width="375px" alt="navigatie groot scherm">
+
+  
+
+Wat ik wou verbeteren is dat elementen in het midden gingen staan binnen de grid, een beeld hebben voor de grote navigatie en feedback over mijn html tot nu toe.
 
   ### Agenda voor meeting
   samen met je groepje opstellen
@@ -120,10 +127,16 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+ Dit heb ik geleerd:
+
+- Waar een z-index voor wordt gebruikt.
+- Dat ik beter een flexbox kan gebruiken ipv grid voor mijn website onderdeel.
+- Dat ik nog het favicon van de website moet overnemen.
+- Dat ik alles even in sections + articles moet neerzetten.
+- Dat ik een nieuwe nav moet maken voor grotere schaal.
+- Dat ik doormiddel van details een dropdown kan maken.
+- Dat ik beter met margin-bottom kan werken ipv span toe te voegen in de html.
+- Dat inline style elementen weggehaald moeten worden.
 
 </details>
 

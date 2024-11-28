@@ -1,6 +1,21 @@
 /**************/
-/* STYLE */
+/* Eerste pagina */
 /**************/
+
+ /*********************/
+  /* CUSTOM PROPERTIES */
+  /*********************/
+  :root {
+	/* startje */
+	--color-primary: #1D1D1B;
+	--color-header: #B19144;
+	--color-background:#ffffff;
+	--global-color: #F3E7D4;
+	--global-back: #f8f2e9;
+	--global-color2: #D4DC91;
+	--color-button-text:#fff;
+
+}
 
 @media (prefers-color-scheme: dark) {
 	body {
@@ -32,22 +47,96 @@ img {
 	border-style: none;
 	}
 
+	/* Dit is de slider.*/
 
-.wrapper{
-	display: grid;
-		grid-template-rows: auto;
-		grid-gap: 20px;
+	section:nth-of-type(1) h2{
+		display: none;
+	}
+
+	section:nth-of-type(1) ul{
+		display: flex;
+		overflow-x: hidden;
+		padding: 0;
+		background-color: rgb(246, 169, 159);
+	}
+
+	section:nth-of-type(1) ul{
+		display: relative;
+	}
+
+	section:nth-of-type(1) button:nth-of-type(1){
+		position:absolute;
+		width: 50px;
+		height: 50px;
+  top: 50%;
+  left: 1rem;
+  bottom: 0;
+  left: 0;
+		z-index: 100;
+		cursor: pointer;
+		display: n;
+	}
+
+	section:nth-of-type(1) button:nth-of-type(2){
+		position:absolute;
+		width: 50px;
+		height: 50px;
+  top: 50%;
+  left: 90%;
+  bottom: 0;
+  left: 90%;
+		z-index: 100;
+		cursor: pointer;
+	}
+
+
+	section:nth-of-type(1) li{
+		flex-shrink:0;
+		height:339px ;
+		width: 100%;
+	}
+	
+section:nth-of-type(1) img{
+	height: 100%;
+  width: 100%;
+  object-fit: cover;
+  
 }
 
-.wrapper img{
-	display: inline;
-	justify-content: center;
-	align-items: center;
+ /*********************/
+  /*********************/
+	/* Dit is voor de 4 categorieen.*/
+	 /*********************/
+	  /*********************/
+
+section :nth-of-type(2){
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+}
+
+/* Alle articles binnen deze section hebben content in het midden staan.*/
+
+section:nth-of-type(2) > article{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background-color: white;
+}
+
+/* Style images */
+section:nth-of-type(2) > article img {
 	width: 100px;
-   
 }
 
-.wrapper .item:nth-child(1) {
+/* Style p binnen alle articles */
+section:nth-of-type(2) > article > p:first-of-type {
+    margin-bottom: 20px;
+}
+
+section:nth-of-type(2) > article:nth-child(1) {
 	animation: bounceLeft;
 	animation-duration: 1.25s ;
   }
@@ -66,7 +155,7 @@ img {
   }
 
 
-  .wrapper .item:is(:nth-child(2), :nth-child(3)){
+  section:nth-of-type(2) > article:is(:nth-child(2), :nth-child(3)){
 	animation: bounceUp;
 	animation-duration: 1.25s ;
   }
@@ -76,7 +165,7 @@ img {
 	0% {opacity: 0;
         transform: translateY(0);}
 
-    40% {opacity: 1;   transform: translateY(-10px); }
+    40% {opacity: 1;   transform: translateY(-20px); }
 
     80% { transform: translateY(10px); }
 
@@ -84,7 +173,7 @@ img {
         transform: translateY(0); }
   }
 
-  .wrapper .item:nth-child(4) {
+  section:nth-of-type(2) > article:nth-child(4)  {
 	animation: bounceRight;
 	animation-duration: 1.25s ;
   }
@@ -102,20 +191,23 @@ img {
 	100% {transform: translateX(0);}
   }
 
-@media (min-width:1045px) {
-	
-	.wrapper{
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive */
-		grid-gap: 20px; 
-		max-width: 1200px;
-		margin: 0 auto; /* Centreer de wrapper */
-	}
-}
+  	/* Bij groter scherm staan de categorieen naast elkaar en wordt de slider groter */
 
-	.item{
-		background-color: var(--color-background);
-		padding: 10px;
+	  @media (min-width: 1045px) {
+		section:nth-of-type(2) {
+			display: flex;
+			flex-direction: row; /* Artikelen naast elkaar */
+			justify-content: space-between;
+			gap: 20px; 
+			margin: 0 auto; 
+		}
+
+		section:nth-of-type(1) li{
+			flex-shrink:0;
+			width: 120%;
+			height:600px ;
+			width: 100%;
+		}
 	}
 
 	/* Begin fotolijsten */
@@ -216,10 +308,14 @@ h3,h4{
 	/* Media landscape nog toevoegen! */
 
 
-	.groen{
+	section:nth-of-type(3) {
 		background-color: #D4DC91;;
 		margin: 0;
 		width: 100%;
+	}	
+
+	section:nth-of-type(3) h2 {
+		display: none;
 	}	
 
 footer{
@@ -258,99 +354,4 @@ text-align: left;
 
 
 
-/*****************************/
-/*****************************/
-/* Hamburger menu, mobiel */
-/*****************************/
-/*****************************/
-
-/* bron: https://codepen.io/Irisluna/pen/WNVBMYY*/
-
-.streepjes li:nth-of-type(1) button {
-	/* grid om de 3 spans in het midden van de button te positioneren */
-	display:grid;
-	place-items:center;
-  }
   
-  /* alledrie de streepjes */
- .streepjes li:nth-of-type(1) button span {
-	grid-row-start:1;
-	grid-column-start:1;
-	
-	/* grootte en kleur van de streepjes */
-	width:2em;
-	height:.2em;
-	background-color:var(--color-primary);
-	
-	/* transities duren .5s */
-	transition-duration:.5s;
-  }
-  
-  /* het eerste streepje */
-  .streepjes li:nth-of-type(1) button span:nth-of-type(1) {
-	/* met transform: */
-	/* .4em omhoog */
-	/* developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translateY */
-	transform:translateY(-.4em);
-  }
-  
-  /*  
-  section.streepjes li:nth-of-type(1) button span:nth-of-type(2) {
-	
-  }*/
-  
-  /* het derde streepje */
-  .streepjes li:nth-of-type(1) button span:nth-of-type(3) {
-	/* met transform: */
-	/* .4em omlaag */
-	transform:translateY(.4em);
-  }
-  
-  /***********************************************************/
-  /* als de EERSTE STREEPJES BUTTON de classs menuOpen heeft */
-  /***********************************************************/
-  
-  /* het eerste streepje */
-  .streepjes li:nth-of-type(1) button[aria-expanded="true"] span:nth-of-type(1) {
-	/* met transform: */
-	/* 1: 45 graden draaien met de klok mee */
-	/* developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate */
-	/* 2: 25% langer maken */
-	/* developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scaleX*/
-	transform:rotate(45deg) scalex(1.25);
-  }
-  
-  /* het tweede streepje */
-  .streepjes li:nth-of-type(1) button[aria-expanded="true"] span:nth-of-type(2) {
-	/* met opacity helemaal doorzichtig maken */
-	opacity:0;
-  }
-  
-  /* het derde streepje */
-  .streepjes li:nth-of-type(1) button[aria-expanded="true"] span:nth-of-type(3) {
-	/* met transform: */
-	/* 1. 45 graden draaien tegen de klok in */
-	/* 2. 25% langer maken */
-	transform:rotate(-45deg) scalex(1.25);
-  }
-  
-  
-/****************************************************************/
-/* styling voor de header als de browser minimaal 38em breed is */
-/****************************************************************/
-
-
-/* @media (max-width:768px){
-.streepjes{
-background-color: #f2f2f2;
-border: solid #e6e6e6;
-border-width: 0 0 1px 1px;
-box-sizing: border-box;
-float: left;
-height: 71px;
-padding-top: 24px;
-text-align: center;
-width: 33.33%;
-}
-}*/
-

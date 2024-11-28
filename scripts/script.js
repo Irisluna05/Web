@@ -22,3 +22,35 @@ function StreepjesButtonKlik() {
   // Activeer toonMenu class
   deNav.classList.toggle("toonMenu");
 }
+
+
+
+/***************************/
+/* Buttons slider*/
+/***************************/
+
+const PrevButton = document.querySelector("section:nth-of-type(1) button:nth-of-type(1)");
+const NextButton = document.querySelector("section:nth-of-type(1) button:nth-of-type(2)");
+const Carousel = document.querySelector("section:nth-of-type(1) ul");
+
+PrevButton.onclick = PrevButtonKlik;
+NextButton.onclick = NextButtonKlik;
+
+function NextButtonKlik() {
+
+  Carousel.scrollLeft = Carousel.scrollLeft + Carousel.offsetWidth;
+
+}
+
+
+function PrevButtonKlik() {
+
+    Carousel.scrollLeft = Carousel.scrollLeft - Carousel.offsetWidth;
+  
+    if (Carousel.scrollLeft < 0) {
+      Carousel.scrollLeft = items.length * scrollAmount; // Jump to the end
+    }
+  }
+
+  /* Credits naar Sanne */
+

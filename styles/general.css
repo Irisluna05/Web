@@ -6,6 +6,20 @@
     box-sizing:border-box;  
   }
 
+  h1{
+    visibility: hidden;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  a:hover{
+    color: white;
+    background-color: peachpuff;
+
+}
+  
   @font-face {
       font-family: 'IntroScriptMedium';
       src: url('/fonts/IntroScriptMedium.woff2') format('woff2');
@@ -17,7 +31,6 @@
   /* CUSTOM PROPERTIES */
   /*********************/
   :root {
-      /* startje */
       --color-primary: #1D1D1B;
       --color-header: #B19144;
       --color-background:#ffffff;
@@ -27,6 +40,12 @@
       --color-button-text:#fff;
   
   }
+
+  body {
+    background-color: var(--global-back);
+    align-items: center;
+  box-sizing: border-box;
+    }
 
 header{
 	display: flex;
@@ -40,31 +59,191 @@ header img{
 	margin: 5px;
 }
 
-nav ul{
+/* Hierdoor blijft de header bovenin geplakt. */
+header{
+  background-color: var(--global-back);
+  position:sticky;
+  top:0;
+  z-index:1000;
+  backdrop-filter:blur(.25em);
+}
+/*links op de pagina het menu*/
+nav:nth-of-type(1){
+	order:-1;
+}
+
+nav ul:nth-of-type(1){
 	display:fixed;
-    gap: 50%;
+    gap: 80%;
 	top:0;
 	bottom:0;
 	right:0;
 	left:0;
     translate:-105%;
-    background-color: var(--global-color)
+    background-color: var(--global-color);
+    text-transform: uppercase;
+    
 }
 
-nav li:hover{
-    color: white;
-    background-color: peachpuff;
-
-}
 nav.toonMenu ul {
-    translate:30%;
+    translate:0%;
+    
+}
+
+/* Het tweede menu voor groter scherm is nog niet zichtbaar*/
+nav:nth-of-type(2){
+  display: none;
+}
+
+/* Dropdown menu*/
+
+details {
+  position: relative;
+
+}
+
+details summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+details[open] summary::after {
+  content: "▲";
+  margin-left: 10px;
+}
+
+summary::after {
+  content: "▼";
+  margin-left: 10px;
+}
+
+details ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  padding: 10px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  display: block;
+}
+
+details ul li {
+  padding: 5px 15px;
+}
+
+details ul li a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+}
+
+details[open] ul {
+  display: block;
 }
 
 
-/*links op de pagina het menu*/
-nav{
-	order:-1;
-}
+/*****************************/
+/*****************************/
+/* Hamburger menu, mobiel */
+/*****************************/
+/*****************************/
+
+/* bron: https://codepen.io/Irisluna/pen/WNVBMYY*/
+
+
+.streepjes li:nth-of-type(1) button {
+	/* grid om de 3 spans in het midden van de button te positioneren */
+	display:grid;
+	place-items:center;
+  }
+  
+  /* alledrie de streepjes */
+ .streepjes li:nth-of-type(1) button span {
+	grid-row-start:1;
+	grid-column-start:1;
+	
+	/* grootte en kleur van de streepjes */
+	width:2em;
+	height:.2em;
+	background-color:var(--color-primary);
+	
+	/* transities duren .5s */
+	transition-duration:.5s;
+  }
+
+  /* Bij de after pseudo klas word het menu bruin */
+  .streepjes button[aria-expanded="true"] span { 
+    background-color: var(--color-header);
+  }
+  
+  .streepjes li:nth-of-type(1) button span {
+    grid-row-start:1;
+    grid-column-start:1;
+    
+    /* grootte en kleur van de streepjes */
+    width:2em;
+    height:.2em;
+    background-color:var(--color-primary);
+    
+    /* transities duren .5s */
+    transition-duration:.5s;
+    }
+
+    .streepjes{
+      margin-right: 50px;
+    }
+  /* het eerste streepje */
+  .streepjes li:nth-of-type(1) button span:nth-of-type(1) {
+	/* met transform: */
+	/* .4em omhoog */
+	/* developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translateY */
+	transform:translateY(-.4em);
+  }
+  
+  /*  
+  section.streepjes li:nth-of-type(1) button span:nth-of-type(2) {
+	
+  }*/
+  
+  /* het derde streepje */
+  .streepjes li:nth-of-type(1) button span:nth-of-type(3) {
+	/* met transform: */
+	/* .4em omlaag */
+	transform:translateY(.4em);
+  }
+  
+  /***********************************************************/
+  /* als de EERSTE STREEPJES BUTTON de classs menuOpen heeft */
+  /***********************************************************/
+  
+  /* het eerste streepje */
+  .streepjes li:nth-of-type(1) button[aria-expanded="true"] span:nth-of-type(1) {
+	/* met transform: */
+	/* 1: 45 graden draaien met de klok mee */
+	/* developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate */
+	/* 2: 25% langer maken */
+	/* developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scaleX*/
+	transform:rotate(45deg) scalex(1.25);
+  }
+  
+  /* het tweede streepje */
+  .streepjes li:nth-of-type(1) button[aria-expanded="true"] span:nth-of-type(2) {
+	/* met opacity helemaal doorzichtig maken */
+	opacity:0;
+  }
+  
+  /* het derde streepje */
+  .streepjes li:nth-of-type(1) button[aria-expanded="true"] span:nth-of-type(3) {
+	/* met transform: */
+	/* 1. 45 graden draaien tegen de klok in */
+	/* 2. 25% langer maken */
+	transform:rotate(-45deg) scalex(1.25);
+  }
+  
 
 .streepjes{
 	justify-content: right;
@@ -79,12 +258,7 @@ nav{
   
 }
 
-
-body {
-	background-color: var(--global-back);
-	align-items: center;
-box-sizing: border-box;
-	}
+/*Bij een groot scherm wordt het hamburger menu weggehaald.*/
 
     @media (min-width:65em) {
         nav {
@@ -99,7 +273,7 @@ box-sizing: border-box;
           display:none;
         }
         
-        nav ul {
+        nav ul:nth-of-type(1) {
           translate:unset;
           position:static;
           background:none;
@@ -108,5 +282,34 @@ box-sizing: border-box;
           flex-wrap:nowrap;
           gap:2em;
         }
+
+    nav:nth-of-type(1)img{
+      order: -1;
+      display: none;
+    }
+
+        nav:nth-of-type(2) {
+          width: 100%;
+        }
+
+        nav:nth-of-type(2) ul{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin: 0%;
+          font-family: Arial, sans-serif;
+          flex-wrap: wrap;
+      }
+
+  
+      nav:nth-of-type(2) ul li {
+        position: relative;
+        margin: 0;
+        flex: 1 1 auto; /* Allows items to grow and shrink to fit the container */
+        min-width: 100px; 
+        max-width: calc(100% / 3 - 20px); /* Ensures at most 3 items fit per row */
+        text-align: center; 
+        box-sizing: border-box;
+      }
     
     }
