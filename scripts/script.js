@@ -6,7 +6,7 @@ console.log("hi");
 /***************************/
 /* STREEPJES BUTTON */
 /***************************/
-const StreepjesButton = document.querySelector(".streepjes li:nth-of-type(1) button");
+const StreepjesButton = document.querySelector("li:nth-of-type(1) button");
 StreepjesButton.onclick = StreepjesButtonKlik;
 
 const deNav = document.querySelector("nav");

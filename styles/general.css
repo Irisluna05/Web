@@ -49,11 +49,12 @@
 
 header{
 	display: flex;
-	justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
 
 header img{
-	justify-content: left;
+  display: inline;
 	align-items: center;
 	width: 130px;
 	margin: 5px;
@@ -73,13 +74,11 @@ nav:nth-of-type(1){
 }
 
 nav ul:nth-of-type(1){
-	display:fixed;
-    gap: 80%;
 	top:0;
 	bottom:0;
 	right:0;
 	left:0;
-    translate:-105%;
+    translate:-200%;
     background-color: var(--global-color);
     text-transform: uppercase;
     
@@ -87,7 +86,6 @@ nav ul:nth-of-type(1){
 
 nav.toonMenu ul {
     translate:0%;
-    
 }
 
 /* Het tweede menu voor groter scherm is nog niet zichtbaar*/
@@ -95,11 +93,14 @@ nav:nth-of-type(2){
   display: none;
 }
 
+/*****************************/
+/*****************************/
 /* Dropdown menu*/
+/*****************************/
+/*****************************/
 
-details {
-  position: relative;
-
+summary{
+color:var(--color-header);
 }
 
 details summary {
@@ -107,38 +108,14 @@ details summary {
   list-style: none;
 }
 
-details[open] summary::after {
-  content: "▲";
-  margin-left: 10px;
-}
-
-summary::after {
-  content: "▼";
-  margin-left: 10px;
-}
 
 details ul {
+  display: flex;
+  flex-direction: column;
   list-style: none;
   margin: 0;
   padding: 0;
-  position: absolute;
-  top: 100%;
-  left: 0;
   background-color: #fff;
-  padding: 10px 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
-  display: block;
-}
-
-details ul li {
-  padding: 5px 15px;
-}
-
-details ul li a {
-  color: #333;
-  text-decoration: none;
-  display: block;
 }
 
 details[open] ul {
@@ -154,15 +131,18 @@ details[open] ul {
 
 /* bron: https://codepen.io/Irisluna/pen/WNVBMYY*/
 
+:active span{
+  color: var(--color-header);
+}
 
-.streepjes li:nth-of-type(1) button {
+li:nth-of-type(1) button {
 	/* grid om de 3 spans in het midden van de button te positioneren */
 	display:grid;
 	place-items:center;
   }
   
   /* alledrie de streepjes */
- .streepjes li:nth-of-type(1) button span {
+  li:nth-of-type(1) button span {
 	grid-row-start:1;
 	grid-column-start:1;
 	
@@ -176,11 +156,11 @@ details[open] ul {
   }
 
   /* Bij de after pseudo klas word het menu bruin */
-  .streepjes button[aria-expanded="true"] span { 
+   button[aria-expanded="true"] span { 
     background-color: var(--color-header);
   }
   
-  .streepjes li:nth-of-type(1) button span {
+   li:nth-of-type(1) button span {
     grid-row-start:1;
     grid-column-start:1;
     
@@ -193,11 +173,9 @@ details[open] ul {
     transition-duration:.5s;
     }
 
-    .streepjes{
-      margin-right: 50px;
-    }
+  
   /* het eerste streepje */
-  .streepjes li:nth-of-type(1) button span:nth-of-type(1) {
+ li:nth-of-type(1) button span:nth-of-type(1) {
 	/* met transform: */
 	/* .4em omhoog */
 	/* developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translateY */
@@ -210,7 +188,7 @@ details[open] ul {
   }*/
   
   /* het derde streepje */
-  .streepjes li:nth-of-type(1) button span:nth-of-type(3) {
+   li:nth-of-type(1) button span:nth-of-type(3) {
 	/* met transform: */
 	/* .4em omlaag */
 	transform:translateY(.4em);
@@ -221,7 +199,7 @@ details[open] ul {
   /***********************************************************/
   
   /* het eerste streepje */
-  .streepjes li:nth-of-type(1) button[aria-expanded="true"] span:nth-of-type(1) {
+  li:nth-of-type(1) button[aria-expanded="true"] span:nth-of-type(1) {
 	/* met transform: */
 	/* 1: 45 graden draaien met de klok mee */
 	/* developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate */
@@ -231,13 +209,13 @@ details[open] ul {
   }
   
   /* het tweede streepje */
-  .streepjes li:nth-of-type(1) button[aria-expanded="true"] span:nth-of-type(2) {
+   li:nth-of-type(1) button[aria-expanded="true"] span:nth-of-type(2) {
 	/* met opacity helemaal doorzichtig maken */
 	opacity:0;
   }
   
   /* het derde streepje */
-  .streepjes li:nth-of-type(1) button[aria-expanded="true"] span:nth-of-type(3) {
+   li:nth-of-type(1) button[aria-expanded="true"] span:nth-of-type(3) {
 	/* met transform: */
 	/* 1. 45 graden draaien tegen de klok in */
 	/* 2. 25% langer maken */
@@ -245,14 +223,8 @@ details[open] ul {
   }
   
 
-.streepjes{
-	justify-content: right;
-	width: 130px;
-	padding: 10px;
-}
-
 /*Hierdoor blijft de button op de juiste positie.*/
-.streepjes{
+span{
   position:relative;
   z-index:1;
   
@@ -261,53 +233,50 @@ details[open] ul {
 /*Bij een groot scherm wordt het hamburger menu weggehaald.*/
 
     @media (min-width:65em) {
-        nav {
-          order:0;
-        }
     
-        .streepjes{
-            display:none;
-        }
+      nav {
+        order:0;
+      }
         
-        nav button {
-          display:none;
+      span{
+        display: none;
+      }
+      
+    
+        span button {
+          display:hidden;
         }
         
         nav ul:nth-of-type(1) {
-          translate:unset;
-          position:static;
-          background:none;
-          padding:0;
-          display:flex;
-          flex-wrap:nowrap;
-          gap:2em;
+          display: none;
         }
 
-    nav:nth-of-type(1)img{
-      order: -1;
+    header img:nth-of-type(1){
       display: none;
+      
     }
 
-        nav:nth-of-type(2) {
-          width: 100%;
-        }
+    nav:nth-of-type(2) {
+      display: block;
+  }
 
         nav:nth-of-type(2) ul{
           display: flex;
+          background-color: var(--global-back);
           justify-content: space-between;
-          align-items: center;
+          flex-wrap: nowrap;
           margin: 0%;
           font-family: Arial, sans-serif;
-          flex-wrap: wrap;
+          translate: 0%;
       }
-
   
       nav:nth-of-type(2) ul li {
         position: relative;
+        gap: 10;
+        justify-content: center;
+        align-items: center;
         margin: 0;
-        flex: 1 1 auto; /* Allows items to grow and shrink to fit the container */
         min-width: 100px; 
-        max-width: calc(100% / 3 - 20px); /* Ensures at most 3 items fit per row */
         text-align: center; 
         box-sizing: border-box;
       }

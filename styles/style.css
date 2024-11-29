@@ -74,7 +74,6 @@ img {
   left: 0;
 		z-index: 100;
 		cursor: pointer;
-		display: n;
 	}
 
 	section:nth-of-type(1) button:nth-of-type(2){
@@ -89,7 +88,7 @@ img {
 		cursor: pointer;
 	}
 
-
+/* Neemt pagina in beslag*/
 	section:nth-of-type(1) li{
 		flex-shrink:0;
 		height:339px ;
@@ -202,7 +201,7 @@ section:nth-of-type(2) > article:nth-child(1) {
 			margin: 0 auto; 
 		}
 
-		section:nth-of-type(1) li{
+		section:nth-of-type(1) li{ /* Grotere slider */
 			flex-shrink:0;
 			width: 120%;
 			height:600px ;
@@ -276,13 +275,6 @@ text-align: center;
 
 		}
 
-		.slider{
-			display: block;
-			margin: 1em;
-			height: fit-content;
-			width: auto;
-		}
-
 h2{
 	display: block;
 font-family: 'IntroScriptMedium', sans-serif;
@@ -314,9 +306,24 @@ h3,h4{
 		width: 100%;
 	}	
 
-	section:nth-of-type(3) h2 {
-		display: none;
-	}	
+	section:nth-of-type(3) article{
+		justify-content: center;
+		align-items: center;
+	}
+
+	section:nth-of-type(3) article p{
+		margin-top: 8%;
+	} 
+
+ @media (min-width: 1045px) {
+
+	section:nth-of-type(3) article{
+		display: flex;
+		justify-content: space-between;
+	}
+	}
+
+		
 
 footer{
 	justify-content: flex-start;
@@ -325,32 +332,12 @@ flex-direction: column;
 background-color: #c5b9ac;
 border-style: none;
 text-align: left;
-	padding: 10px;
 
 }
 
-/**************/
-/* CSS Slider*/
-/**************/ 
-
-.slider{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	overflow-x: auto;
-}
-
-.slider li{
-	flex-shrink: 0;
-}
-
-.slider img{
-	width: 100%;
-	height: 500px;
-}
-.slider li img{
-	margin-right:5px;
-}
+footer section {
+	background-color: var(--color-background);
+} 
 
 
 
