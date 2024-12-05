@@ -151,8 +151,9 @@ Wat ik wou verbeteren is dat elementen in het midden gingen staan binnen de grid
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+<img src="readme-images/dropdown.png" width="375px" alt="dropdown header">
 
-
+Ik wil mijn header verbeteren en mijn hamburgermenu van kleur laten veranderen ook moet ik nog een deel van de homepagina responsive maken.
   ### Agenda voor meeting
   samen met je groepje opstellen
 

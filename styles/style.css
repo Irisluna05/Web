@@ -1,46 +1,30 @@
 /**************/
-/* Eerste pagina */
+/* Home pagina */
 /**************/
 
  /*********************/
   /* CUSTOM PROPERTIES */
   /*********************/
   :root {
-	/* startje */
-	--color-primary: #1D1D1B;
+	--color-primary: light dark #1D1D1B white;
 	--color-header: #B19144;
-	--color-background:#ffffff;
-	--global-color: #F3E7D4;
-	--global-back: #f8f2e9;
-	--global-color2: #D4DC91;
+	--color-background:light dark #ffffff grey;
+	--global-color: light dark #F3E7D4 #1D1D1B;
+	--global-back: light dark #f8f2e9 #1D1D1B;
+	--global-color2: light dark #D4DC91 #525829 ;
 	--color-button-text:#fff;
-
 }
 
-@media (prefers-color-scheme: dark) {
-	body {
-	  color: white;
-	  background-color: #1D1D1B;
-	}
-}
-
-
-ul{
-	font-family: "Alata",Sans-serif;
-	list-style: none;
-}
-
-p{
-	font-family: "Alata",Sans-serif;
-	font-size: 15px;
-	text-align: center;
-}
-
-a{
-	font-family: "Alata",Sans-serif;
-	color: rgb(177, 145, 68);
-	text-transform: uppercase;
-}
+h1{
+    visibility: hidden;
+  }
+  
+  h3,h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-header)
+  }
 
 img {
 	vertical-align: middle;
@@ -209,29 +193,45 @@ section:nth-of-type(2) > article:nth-child(1) {
 		}
 	}
 
-	/* Begin fotolijsten */
+	section:nth-of-type(3) h2{
+		color: #6a422a
+	  }
 
-	.fotolijst img {
-		max-width: 90%; 
+	  section:nth-of-type(3) p:nth-child(1){
+		display: flex;
+		justify-self: center;
+		align-self: center;
+		font-family: 'IntroScriptMedium', sans-serif;
+	  }
+
+	/* Begin fotolijsten */
+	section:nth-of-type(3) ul{
+		margin:0;
+	padding:0;
+	list-style-type:"";
+	}
+
+	figure img {
+		width: 50%;
 		max-height: 70%; 
 		background-color: var(--color-background);
 		object-fit: contain; 
 	}
 	
-	.fotolijst figure {
+	figure:is(:nth-of-type(1), :nth-of-type(3)) {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		width: 400px; 
 		height: 300px;
-		background-color: var(--color-background); 
+		background-color: #f8f2e9; 
 		border: 1px solid #ddd;
 		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Aan chatgpt gevraagd */
 		rotate: -3deg;
 	}
 
-	.fotolijst:hover{
+	figure:hover{
 		rotate: 7deg;
 		transition-duration: 0.5s;
 	}
@@ -243,7 +243,7 @@ section:nth-of-type(2) > article:nth-child(1) {
 		object-fit: contain; 
 	}
 	
-	.fotolijst2 figure {
+	figure:is(:nth-of-type(2), :nth-of-type(4)) {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -256,10 +256,6 @@ section:nth-of-type(2) > article:nth-child(1) {
 		rotate: 7deg;
 	}
 
-	.fotolijst2:hover{
-		rotate: -3deg;
-		transition-duration: 0.5s;
-	}
 
 	/* Einde fotolijsten */
 
@@ -275,36 +271,14 @@ text-align: center;
 
 		}
 
-h2{
-	display: block;
-font-family: 'IntroScriptMedium', sans-serif;
-box-sizing: border-box;
-color: var(--color-header);
-border-radius: 0 0 0 0;
-font-size: 35px;
-font-weight: 500;
-height: auto;
-line-height: 40.25px;
-text-align: center;
-text-transform: lowercase;
-width: auto;
-}
-
-h3,h4{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: var(--color-header)
-}
-
-	/* Media landscape nog toevoegen! */
-
 
 	section:nth-of-type(3) {
 		background-color: #D4DC91;;
 		margin: 0;
 		width: 100%;
 	}	
+
+
 
 	section:nth-of-type(3) article{
 		justify-content: center;
@@ -315,12 +289,28 @@ h3,h4{
 		margin-top: 8%;
 	} 
 
- @media (min-width: 1045px) {
-
-	section:nth-of-type(3) article{
+	section:nth-of-type(3) ul:nth-of-type(1){
 		display: flex;
 		justify-content: space-between;
+		width: 20%;
 	}
+
+	
+
+
+	/* Fotolijsten op een rij van 4 op de computer */
+ @media (min-width: 800px) {
+
+	section:nth-of-type(3) ul:nth-of-type(2){
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding: 0;
+		margin: 0;
+	}
+
+	
+	
 	}
 
 		
@@ -338,6 +328,12 @@ text-align: left;
 footer section {
 	background-color: var(--color-background);
 } 
+
+footer p{
+	color: var(--color-header);
+	text-transform: capitalize;
+
+}
 
 
 

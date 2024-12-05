@@ -7,17 +7,49 @@
   }
 
   h1{
-    visibility: hidden;
+    display:none;
   }
 
+  h2{
+    display: block;
+  font-family: 'IntroScriptMedium', sans-serif;
+  box-sizing: border-box;
+  color: var(--color-header);
+  border-radius: 0 0 0 0;
+  font-size: 35px;
+  font-weight: 500;
+  height: auto;
+  line-height: 40.25px;
+  text-align: center;
+  text-transform: lowercase;
+  width: auto;
+  }
+  
+  body{
+    margin: 0;
+  }
+  
+  p{
+    font-family: "Alata",Sans-serif;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  ul{
+    font-family: "Alata",Sans-serif;
+    list-style: none;
+  }
+  
   a{
+    font-family: "Alata",Sans-serif;
+    color: rgb(177, 145, 68);
+    text-transform: uppercase;
     text-decoration: none;
   }
 
   a:hover{
     color: white;
     background-color: peachpuff;
-
 }
   
   @font-face {
@@ -31,14 +63,13 @@
   /* CUSTOM PROPERTIES */
   /*********************/
   :root {
-      --color-primary: #1D1D1B;
-      --color-header: #B19144;
-      --color-background:#ffffff;
-      --global-color: #F3E7D4;
-      --global-back: #f8f2e9;
-      --global-color2: #D4DC91;
-      --color-button-text:#fff;
-  
+    --color-primary: light dark #1D1D1B white;
+    --color-header: #B19144;
+    --color-background:light dark #ffffff grey;
+    --global-color: light dark #F3E7D4 #1D1D1B;
+    --global-back: light dark #f8f2e9 #1D1D1B;
+    --global-color2: light dark #D4DC91 #525829 ;
+    --color-button-text:#fff;
   }
 
   body {
@@ -47,45 +78,49 @@
   box-sizing: border-box;
     }
 
+    /* Hierdoor blijft de header bovenin geplakt. Header voor mobiel */
 header{
 	display: flex;
-  justify-content: center;
+  justify-content: flex-start; 
   align-items: center;
+  position:sticky;
+  margin:1em;
+  padding:1em;
+  z-index:1000;
+  background-color:#ffffff;
 }
 
 header img{
   display: inline;
-	align-items: center;
 	width: 130px;
 	margin: 5px;
 }
 
-/* Hierdoor blijft de header bovenin geplakt. */
-header{
-  background-color: var(--global-back);
-  position:sticky;
-  top:0;
-  z-index:1000;
-  backdrop-filter:blur(.25em);
-}
+
 /*links op de pagina het menu*/
 nav:nth-of-type(1){
-	order:-1;
+	justify-content: left;
+  width: 236px;
+  order: -1;
 }
 
-nav ul:nth-of-type(1){
-	top:0;
-	bottom:0;
-	right:0;
-	left:0;
-    translate:-200%;
-    background-color: var(--global-color);
-    text-transform: uppercase;
-    
+nav ul:nth-of-type(1) {
+  position: absolute; /* Zorgt ervoor dat de ul loskomt van de normale flow */
+  top: 0;
+  left: 0;
+  height: 100vh; /* Laat het menu de volledige hoogte van het scherm innemen */
+  width: 236px; 
+  translate: -100%; /* Start buiten beeld aan de linkerkant */
+  background-color:#f8f2e9;
+  text-transform: uppercase;
+  z-index: 1000;
+  transition: 0.5s ease; /* Voor een soepele overgang */
 }
+
 
 nav.toonMenu ul {
     translate:0%;
+    justify-self: flex-start;
 }
 
 /* Het tweede menu voor groter scherm is nog niet zichtbaar*/
@@ -101,11 +136,18 @@ nav:nth-of-type(2){
 
 summary{
 color:var(--color-header);
+transform: translateY(0);
 }
+
+summary:hover{
+  color: white;
+  background-color: peachpuff;
+} 
 
 details summary {
   cursor: pointer;
   list-style: none;
+  transform: translateY(40);
 }
 
 
@@ -241,19 +283,29 @@ span{
       span{
         display: none;
       }
-      
     
-        span button {
+        button {
           display:hidden;
         }
         
         nav ul:nth-of-type(1) {
           display: none;
+          width: 0;
+          height: 0;
         }
 
     header img:nth-of-type(1){
       display: none;
       
+    }
+
+    header{
+      display: flex;
+      align-items: center;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background-color: var(--global-back);
     }
 
     nav:nth-of-type(2) {
@@ -282,3 +334,15 @@ span{
       }
     
     }
+
+    	/* Media landscape toevoegd! */
+      @media screen and (orientation: landscape) {
+        body {
+          font-size: .7em;
+        }
+        
+        header{
+          display: absolute
+        }
+
+      }

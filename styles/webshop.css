@@ -1,0 +1,122 @@
+/**************/
+/* Webshop pagina */
+/**************/
+:root {
+	--color-primary: light dark #1D1D1B white;
+	--color-header: #B19144;
+	--color-background:light dark #ffffff grey;
+	--global-color: light dark #F3E7D4 #1D1D1B;
+	--global-back: light dark #f8f2e9 #1D1D1B;
+	--global-color2: light dark #D4DC91 #525829 ;
+	--color-button-text:#fff;
+}
+
+h3,h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-header)
+  }
+
+
+body{
+    background-color:var(--global-color2)
+}
+
+ul{
+	font-family: "Alata",Sans-serif;
+	list-style: none;
+}
+
+
+img:nth-of-type(2){
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(3); /* Centraal plaatsen én schalen */
+        
+}
+
+@keyframes slideIn{
+
+	0%{
+transform: translateX(-100%);
+	}
+
+	50%{
+		transform: translateX(-20%);
+
+	}
+
+	100%{
+		transform: translateX(0%)
+	}
+}
+
+/*https://www.w3schools.com/cssref/css3_pr_animation-timing-function.php
+Link gebruikt voor animatie timing function*/
+section:nth-of-type(1){
+animation-name: slideIn;
+animation-duration: 2s;
+animation-timing-function: ease-in;
+}
+
+ section:nth-of-type(1) p{
+	display:absolute;
+	height:0,7em;
+	rotate:-10deg;
+	font-size:18px;
+	font-family: 'IntroScriptMedium', sans-serif;
+	font-size: 15px;
+	text-align: center;
+	top:2em;
+	bottom:0;
+	left:0;
+	right:0;
+	line-height: .5em;
+	color:rgb(106, 87, 87);
+}
+
+
+section:nth-of-type(2){
+	background-color: var(--global-color);
+	}
+
+	ul{
+		display: grid;
+		grid-column-gap: 20px;
+grid-row-gap: 40px;
+margin:0;
+grid-template-columns: repeat(3,1fr);
+}
+
+section li img {
+    order: 1; /* Zet de afbeelding bovenaan */
+    max-width: 100%; /* Zorg ervoor dat de afbeelding goed schaalt */
+}
+
+li p:nth-of-type(1) {
+    order: 2; /* Eerste <p> element komt direct onder de afbeelding */
+}
+
+li h2 {
+    order: 3; /* Titel komt na de eerste <p> */
+}
+
+li p:nth-of-type(2) {
+    order: 4; /* Laatste <p> onder de titel */
+}
+
+
+	section li:nth-of-type(2){
+		border-radius: 10%;
+		text-align: center;
+		border-width: 0;
+border-style: solid;
+border-radius: 15px;
+background-color: #fff;
+overflow: hidden;
+	}
+
+
