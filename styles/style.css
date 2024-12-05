@@ -15,6 +15,9 @@
 	--color-button-text:#fff;
 }
 
+body{
+	background-color: var(--global-color);
+}
 h1{
     visibility: hidden;
   }
@@ -106,7 +109,6 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-background-color: white;
 }
 
 /* Style images */
@@ -121,7 +123,7 @@ section:nth-of-type(2) > article > p:first-of-type {
 
 section:nth-of-type(2) > article:nth-child(1) {
 	animation: bounceLeft;
-	animation-duration: 1.25s ;
+	animation-duration: 2s ;
   }
 
 /* Het bounce effect is een speels karakter in de website*/
@@ -140,7 +142,7 @@ section:nth-of-type(2) > article:nth-child(1) {
 
   section:nth-of-type(2) > article:is(:nth-child(2), :nth-child(3)){
 	animation: bounceUp;
-	animation-duration: 1.25s ;
+	animation-duration: 2s ;
   }
 
 /* Het bounce effect is een speels karakter in de website*/
@@ -158,7 +160,7 @@ section:nth-of-type(2) > article:nth-child(1) {
 
   section:nth-of-type(2) > article:nth-child(4)  {
 	animation: bounceRight;
-	animation-duration: 1.25s ;
+	animation-duration: 2s ;
   }
 
 /* Het bounce effect is een speels karakter in de website*/
@@ -252,7 +254,7 @@ section:nth-of-type(2) > article:nth-child(1) {
 		justify-content: center;
 		width: 400px; 
 		height: 300px;
-		background-color: #f8f2e9; 
+		background-color: white; 
 		border: 1px solid #ddd;
 		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Aan chatgpt gevraagd */
 		rotate: -3deg;
