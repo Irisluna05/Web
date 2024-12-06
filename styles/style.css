@@ -18,6 +18,7 @@
 body{
 	background-color: var(--global-color);
 }
+
 h1{
     visibility: hidden;
   }
@@ -111,6 +112,12 @@ justify-content: center;
 align-items: center;
 }
 
+section:nth-of-type(2) > article img{
+	order: -1;
+	height: 8em;
+width: 100px
+}
+
 /* Style images */
 section:nth-of-type(2) > article img {
 	width: 100px;
@@ -190,7 +197,7 @@ section:nth-of-type(2) > article:nth-child(1) {
 		section:nth-of-type(1) li{ /* Grotere slider */
 			flex-shrink:0;
 			width: 120%;
-			height:600px ;
+			height:600px;
 			width: 100%;
 		}
 	}
@@ -198,7 +205,21 @@ section:nth-of-type(2) > article:nth-child(1) {
 	section:nth-of-type(3) h2{
 		color: #6a422a
 	  }
-	  
+
+	  /* Social icons*/
+	  section:nth-of-type(3) ul:nth-of-type(1){
+		display: inline-grid;
+		justify-content: center;
+		grid-template-columns: repeat(3,1fr);
+  width: 100%;
+	  }
+
+	  section:nth-of-type(3) ul:nth-of-type(1) img{
+		height: 4em;
+	  }
+
+	  /* Socials animatie*/
+
 	  @keyframes pop{
 		0% {
 			transform: scale(1.2);
@@ -211,20 +232,11 @@ section:nth-of-type(2) > article:nth-child(1) {
 		  }
 	  }
 
-	  section:nth-of-type(3) ul:nth-of-type(1){
-		display: flex;
-		justify-content: space-between; 
-		margin: 1em;
-		
-	  }
-
-
 	  section:nth-of-type(3) ul:nth-of-type(1) img:hover{
 		animation-name:pop;
 		animation-duration: 1.5s;
 		animation-iteration-count: infinite;
 	  }
-
 
 	  section:nth-of-type(3) p:nth-child(1){
 		display: flex;
@@ -240,12 +252,21 @@ section:nth-of-type(2) > article:nth-child(1) {
 	list-style-type:"";
 	}
 
+	/* Alles gecentreerd */
+
+	section:nth-of-type(3) li{
+		display: flex;
+	flex-direction: column;
+	align-items: center;
+	}
+
 	figure img {
 		width: 50%;
 		max-height: 70%; 
 		background-color: var(--color-background);
 		object-fit: contain; 
 	}
+
 	
 	figure:is(:nth-of-type(1), :nth-of-type(3)) {
 		display: flex;
@@ -320,10 +341,12 @@ text-align: center;
 
 	section:nth-of-type(3) ul:nth-of-type(2){
 		display: flex;
+		flex-direction: column;
+		justify-content: center;
 		justify-content: space-between;
-		width: 20%;
-	}
 
+	}
+	
 	
 
 
@@ -352,9 +375,40 @@ text-align: left;
 
 }
 
+	/* Footer contact en volg ons naast elkaar */
+	@media (min-width: 800px) {
+
+		footer{
+			display: flex;
+		}
+		
+		}
+
 footer section {
 	background-color: var(--color-background);
 } 
+
+footer h3{
+	animation: bounceRight;
+	animation-duration: 2s;
+}
+
+footer ul{
+	display: inline-grid;
+	justify-content: center;
+	max-width: 20em;
+	grid-template-columns: repeat(3,1fr);
+width: 100%;
+animation: bounceRight;
+	animation-duration: 2s;
+  }
+
+
+ footer ul img:hover{
+	animation-name:pop;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+  }
 
 footer p{
 	color: var(--color-header);

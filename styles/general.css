@@ -6,6 +6,26 @@
     box-sizing:border-box;  
   }
 
+  @font-face {
+    font-family: 'IntroScriptMedium';
+    src: url('../fonts/IntroScriptMedium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+  --color-primary: light dark #1D1D1B white;
+  --color-header: #B19144;
+  --color-background:light dark #ffffff grey;
+  --global-color: light dark #F3E7D4 #1D1D1B;
+  --global-back: light dark #f8f2e9 #1D1D1B;
+  --global-color2: light dark #D4DC91 #525829 ;
+  --color-button-text:#fff;
+}
+
   h1{
     display:none;
   }
@@ -51,31 +71,12 @@
     color: white;
     background-color: peachpuff;
 }
-  
-  @font-face {
-      font-family: 'IntroScriptMedium';
-      src: url('/fonts/IntroScriptMedium.woff2') format('woff2');
-      font-weight: 500;
-      font-style: normal;
-  }
-  
-  /*********************/
-  /* CUSTOM PROPERTIES */
-  /*********************/
-  :root {
-    --color-primary: light dark #1D1D1B white;
-    --color-header: #B19144;
-    --color-background:light dark #ffffff grey;
-    --global-color: light dark #F3E7D4 #1D1D1B;
-    --global-back: light dark #f8f2e9 #1D1D1B;
-    --global-color2: light dark #D4DC91 #525829 ;
-    --color-button-text:#fff;
-  }
+
 
   body {
     background-color: var(--global-back);
     align-items: center;
-  box-sizing: border-box;
+    box-sizing: border-box;
     }
 
     /* Hierdoor blijft de header bovenin geplakt. Header voor mobiel */
@@ -191,16 +192,13 @@ li:nth-of-type(1) button {
 	/* grootte en kleur van de streepjes */
 	width:2em;
 	height:.2em;
-	background-color:var(--color-primary);
+	background-color: black;
 	
 	/* transities duren .5s */
 	transition-duration:.5s;
+
   }
 
-  /* Bij de after pseudo klas word het menu bruin */
-   button[aria-expanded="true"] span { 
-    background-color: var(--color-header);
-  }
   
    li:nth-of-type(1) button span {
     grid-row-start:1;
@@ -209,7 +207,7 @@ li:nth-of-type(1) button {
     /* grootte en kleur van de streepjes */
     width:2em;
     height:.2em;
-    background-color:var(--color-primary);
+   background-color: black;
     
     /* transities duren .5s */
     transition-duration:.5s;
@@ -267,9 +265,9 @@ li:nth-of-type(1) button {
 
 /*Hierdoor blijft de button op de juiste positie.*/
 span{
+  display: block;
   position:relative;
   z-index:1;
-  
 }
 
 /*Bij een groot scherm wordt het hamburger menu weggehaald.*/

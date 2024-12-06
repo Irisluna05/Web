@@ -26,8 +26,9 @@ function StreepjesButtonKlik() {
 
 
 /***************************/
-/* Buttons slider*/
+/* Foto carousel*/
 /***************************/
+ /* Credits naar Sanne */
 
 const PrevButton = document.querySelector("section:nth-of-type(1) button:nth-of-type(1)");
 const NextButton = document.querySelector("section:nth-of-type(1) button:nth-of-type(2)");
@@ -52,5 +53,4 @@ function PrevButtonKlik() {
     }
   }
 
-  /* Credits naar Sanne */
-
+ 
