@@ -7,6 +7,12 @@
   }
 
   @font-face {
+    font-family: 'MontecatiniProStrettoUltra';
+    src: url('../fonts/MontecatiniProStrettoUltra.woff2') format('woff2'); 
+	font-style: normal;
+}
+
+  @font-face {
     font-family: 'IntroScriptMedium';
     src: url('../fonts/IntroScriptMedium.woff2') format('woff2');
     font-weight: 500;
@@ -17,34 +23,45 @@
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-  --color-primary: light dark #1D1D1B white;
-  --color-header: #B19144;
-  --color-background:light dark #ffffff grey;
-  --global-color: light dark #F3E7D4 #1D1D1B;
-  --global-back: light dark #f8f2e9 #1D1D1B;
-  --global-color2: light dark #D4DC91 #525829 ;
+  --color-primary: #1D1D1B;
+  --color-heading: #B19144;
+  --color-background:#ffffff;
+  --global-color: #1D1D1B;
+  --global-back:#f8f2e9;
+  --global-color2: #D4DC91;
   --color-button-text:#fff;
+  --color-p1:rgb(106, 87, 87);
+  --colornav: #f8f2e9;
+  --color3: #6A5757;
 }
 
-  h1{
-    display:none;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-heading: #F6A99F;
+    --color-primary: #ffffff;
+    --color-background: grey;
+    --global-color: rgb(204, 204, 204);
+    --global-back: rgb(41, 41, 41);
+    --global-color2: #9ba170;
+    --color-p1:#ffffff;
+    --colornav: rgb(204, 204, 204);
+    --color3: #F6A99F;
   }
 
-  h2{
-    display: block;
-  font-family: 'IntroScriptMedium', sans-serif;
-  box-sizing: border-box;
-  color: var(--color-header);
-  border-radius: 0 0 0 0;
-  font-size: 35px;
-  font-weight: 500;
-  height: auto;
-  line-height: 40.25px;
-  text-align: center;
-  text-transform: lowercase;
-  width: auto;
+  figure{
+    filter: brightness(0.9)
   }
-  
+
+}
+
+/*https://chatgpt.com/share/67571733-48f4-800b-a028-c440eae0fb38*/
+/*Chatgpt gebruikt voor dark en lightmode aanpassingen eerst light dark gebruikt*/
+
+h1{
+	display: none;
+    visibility: hidden;
+  }
+
   body{
     margin: 0;
   }
@@ -53,6 +70,7 @@
     font-family: "Alata",Sans-serif;
     font-size: 15px;
     text-align: center;
+    color: var(--color-primary);
   }
 
   ul{
@@ -60,17 +78,47 @@
     list-style: none;
   }
   
-  a{
+  nav a{
     font-family: "Alata",Sans-serif;
     color: rgb(177, 145, 68);
     text-transform: uppercase;
     text-decoration: none;
+    height: 100vh; /* Laat het menu de volledige hoogte van het scherm innemen */
+    width: 236px;
   }
 
-  a:hover{
+   /* Hover state hammie */
+
+  nav:nth-of-type(1) a:hover{
     color: white;
-    background-color: peachpuff;
+    background-color:#F49E75;
 }
+
+nav:nth-of-type(2) a:hover{
+  color: #414042
+}
+
+nav a:focus{
+  color: white;
+  background-color: rgb(232, 141, 61);
+}
+
+  section a{
+    font-family: "Alata",Sans-serif;
+    text-transform: capitalize;
+    color: rgb(177, 145, 68);
+    text-transform: uppercase;
+     /* Duidelijke link door een streep onderin */
+    text-decoration:dashed;
+  }
+
+  section a:hover{
+    color:#F6A99F;
+  }
+
+  section a:visited{
+    color:#b36258;
+  }
 
 
   body {
@@ -80,39 +128,30 @@
     }
 
     /* Hierdoor blijft de header bovenin geplakt. Header voor mobiel */
-header{
-	display: flex;
-  justify-content: flex-start; 
-  align-items: center;
-  position:sticky;
-  margin:1em;
-  padding:1em;
-  z-index:1000;
-  background-color:#ffffff;
-}
+    header {
+      display: flex; 
+      justify-content: space-between; /* logo links en span rechts */
+      align-items: center; 
+      position: sticky;
+      top: 0; 
+      padding: 1em;
+      z-index: 1000;
+      background-color: var(--colornav);
+    }
 
-header img{
-  display: inline;
-	width: 130px;
-	margin: 5px;
-}
+    header img{
+      width: 8.2em;
+    }
 
-
-/*links op de pagina het menu*/
-nav:nth-of-type(1){
-	justify-content: left;
-  width: 236px;
-  order: -1;
-}
 
 nav ul:nth-of-type(1) {
-  position: absolute; /* Zorgt ervoor dat de ul loskomt van de normale flow */
+  position: absolute;
   top: 0;
   left: 0;
   height: 100vh; /* Laat het menu de volledige hoogte van het scherm innemen */
   width: 236px; 
-  translate: -100%; /* Start buiten beeld aan de linkerkant */
-  background-color:#f8f2e9;
+  translate: -100%; 
+  background-color:var(--colornav);
   text-transform: uppercase;
   z-index: 1000;
   transition: 0.5s ease; /* Voor een soepele overgang */
@@ -129,6 +168,51 @@ nav:nth-of-type(2){
   display: none;
 }
 
+footer{
+display: flex;
+flex-direction: row;
+border-style: none;
+text-align: center;
+}
+
+footer section {
+	background-color: var(--color-background);
+} 
+
+footer h3{
+	animation: bounceRight;
+	animation-duration: 2s;
+}
+
+footer ul{
+	display: inline-grid;
+	justify-content: center;
+	max-width: 20em;
+	grid-template-columns: repeat(3,1fr);
+width: 100%;
+animation: bounceRight;
+	animation-duration: 2s;
+  }
+
+
+ footer ul img:hover{
+	animation-name:pop;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+  }
+
+footer p{
+	color: var(--color-header);
+	text-transform: capitalize;
+
+}
+
+/* Footer bij groter scherm*/
+
+footer{
+  flex-direction: column;
+}
+
 /*****************************/
 /*****************************/
 /* Dropdown menu*/
@@ -136,34 +220,28 @@ nav:nth-of-type(2){
 /*****************************/
 
 summary{
-color:var(--color-header);
+color:var(--color-heading);
 transform: translateY(0);
+margin-bottom: 2em;
 }
 
 summary:hover{
-  color: white;
-  background-color: peachpuff;
+  color: #414042
 } 
 
 details summary {
   cursor: pointer;
   list-style: none;
-  transform: translateY(40);
 }
-
 
 details ul {
   display: flex;
   flex-direction: column;
   list-style: none;
-  margin: 0;
   padding: 0;
-  background-color: #fff;
+  transform: translateY(3em); /* Hierdoor staat iets naar beneden*/
 }
 
-details[open] ul {
-  display: block;
-}
 
 
 /*****************************/
@@ -173,6 +251,8 @@ details[open] ul {
 /*****************************/
 
 /* bron: https://codepen.io/Irisluna/pen/WNVBMYY*/
+
+
 
 :active span{
   color: var(--color-header);
@@ -265,7 +345,6 @@ li:nth-of-type(1) button {
 
 /*Hierdoor blijft de button op de juiste positie.*/
 span{
-  display: block;
   position:relative;
   z-index:1;
 }
@@ -299,11 +378,14 @@ span{
 
     header{
       display: flex;
+      justify-content: center;
       align-items: center;
       position:sticky;
       top:0;
       z-index:1000;
-      background-color: var(--global-back);
+      padding: 2em;
+      margin: 0;
+      background-color:var(--colornav);
     }
 
     nav:nth-of-type(2) {
@@ -312,7 +394,7 @@ span{
 
         nav:nth-of-type(2) ul{
           display: flex;
-          background-color: var(--global-back);
+          background-color:var(--colornav);
           justify-content: space-between;
           flex-wrap: nowrap;
           margin: 0%;
@@ -334,13 +416,14 @@ span{
     }
 
     	/* Media landscape toevoegd! */
-      @media screen and (orientation: landscape) {
+      @media (orientation: landscape) and (max-width: 20em){
         body {
-          font-size: .7em;
+          font-size: 1em;
         }
-        
-        header{
-          display: absolute
+
+        p{
+          text-align: left;
         }
 
       }
+

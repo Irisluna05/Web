@@ -1,32 +1,49 @@
 /**************/
 /* Webshop pagina */
 /**************/
-:root {
 
-		--color-primary:  #1D1D1B;
-		--color-header: #B19144;
-		--color-background: #ffffff ;
-		--global-color:  #F3E7D4;
-		--global-back:  #f8f2e9;
-		--global-color2:  #D4DC91;
-		--color-button-text:#fff;
-}
-
-@font-face {
-    font-family: 'MontecatiniProStrettoUltra';
-    src: url('../fonts/MontecatiniProStrettoUltra.woff2') format('woff2'); 
-	font-style: normal;
-}
-
-h1{
-	font-family:'MontecatiniProStrettoUltra',helvetica ;
-}
-h3,h4{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--color-header)
+h2{
+    display: block;
+  font-family: 'MontecatiniProStrettoUltra', sans-serif;
+  box-sizing: border-box;
+  color: var(--color-heading);
+  border-radius: 0 0 0 0;
+  font-weight: 500;
+  height: auto;
+  line-height: 40.25px;
+  text-align: center;
+  text-transform: lowercase;
+  width: auto;
+  font-size: 2em;
   }
+
+
+section:nth-of-type(1) {
+	text-align: center;
+}
+
+section:nth-of-type(1) h2:nth-of-type(1){
+	font-size: 9em;
+	line-height: 40.25px;
+  }
+
+main section:nth-of-type(1) p{
+	display:absolute;
+	height:0,7em;
+	rotate:-10deg;
+	font-size:2em;
+	font-family: 'IntroScriptMedium', sans-serif;
+	font-size: 2em;
+	line-height: .5em;
+	color:var(--color-p1)
+}
+
+main section:nth-of-type(1) > img {
+    display: inline-block; 
+    padding: 0;
+	margin: 0;
+    height: 40em;
+}
 
 
 ul{
@@ -35,14 +52,6 @@ ul{
 }
 
 
-img:nth-of-type(2){
-	display: block;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%) scale(3); /* Centraal plaatsen én schalen */
-        
-}
 
 @keyframes slideIn{
 
@@ -68,34 +77,8 @@ animation-duration: 2s;
 animation-timing-function: ease-in;
 }
 
- section:nth-of-type(1) p{
-	display:absolute;
-	height:0,7em;
-	rotate:-10deg;
-	font-size:18px;
-	font-family: 'IntroScriptMedium', sans-serif;
-	font-size: 15px;
-	text-align: center;
-	top:2em;
-	bottom:0;
-	left:0;
-	right:0;
-	line-height: .5em;
-	color:rgb(106, 87, 87);
-}
 
 /*Taarten naast elkaar*/
-section:nth-of-type(2){
-	background-color: paleturquoise
-	}
-
-	ul{
-		display: grid;
-		grid-column-gap: 20px;
-grid-row-gap: 1em;
-margin:0;
-grid-template-columns: repeat(3,1fr); /*3 rijen, 1 fractie van het scherm*/
-}
 
 
 section:nth-of-type(2) li{
@@ -153,29 +136,57 @@ vertical-align: middle;
 		border-color: #F6A99F;
 		}
 
-	
+		/* kleinere tekst bij telefoon en kleinere taart */
+		@media (max-width: 55em) {
+
+			section:nth-of-type(1) h2:nth-of-type(1){
+				font-size: 2em;
+			  }
+		
+			  section:nth-of-type(1) p{
+				font-size: 1.5em;
+			  }
+
+			  main section:nth-of-type(1) > img {
+				height: 15em;
+			}
+			
+			}
+
+			main ul:nth-of-type(1) {
+				display: grid;
+				grid-column-gap: 20px;
+		grid-row-gap: 1em;
+		margin:0;
+		grid-template-columns: repeat(3,1fr); /*3 rijen, 1 fractie van het scherm*/
+		}
 
 		/*2 rijen, verdeeld over het scherm*/
 		@media (max-width: 70em) {
-			ul {
+			main ul:nth-of-type(1)  {
 				grid-template-columns: repeat(2, 1fr); /* 2 kolommen */
 			}
 		}
 		
-		@media (max-width: 50em) {
-			ul {
+		/*1 rij, verdeeld over het scherm*/
+		@media (max-width: 40em) {
+
+
+			main ul:nth-of-type(1) {
+				width: 27em;
+				place-self: center;
 				grid-template-columns: 1fr; /* 1 kolom */
 			}
 		}
-		/*1 rijen, verdeeld over het scherm*/
+		
 
-			/*Dialog style groot scherm*/
+			/*Dialog style groot scherm, dialog verborgen*/
 
-			dialog{
+			dialog.hide{
 				display: relative;
 				display: flex;
-				flex-direction: row;
-				width: 80%;
+				flex-direction: column;
+				width: 65%;
 			}
 
 
@@ -200,6 +211,7 @@ vertical-align: middle;
 		border-color: #F6A99F;
 	}
 
+/*ijstaart foto*/
 			dialog img:nth-of-type(1){
 				display: block;
 				width: 100%;
@@ -210,21 +222,31 @@ vertical-align: middle;
 			dialog h2{
 				margin-top: 0;
 font-family: 'MontecatiniProStrettoUltra', sans-serif;
-color: #b19144;
+color: var(--color-heading);
 			}
 
+		
 			/*sluitknop style*/
 			dialog img:nth-of-type(2) {
-				height: 1.5em;
+				height: 3em;
 				position: absolute;
 				top: 2.5em; 
-				opacity: 0.8; 
+				top: 0;
+                right: 0;
+                bottom: 0;
+				left:auto;
+                z-index: 1000;
+                cursor: pointer;
+				background-color: white;
+				border-radius: 40%;
 			}
 
-			@media (max-width: 70em) {
+
+			/*Stijl groter scherm*/
+			@media (width > 60em) {
 				
 			dialog{
 				width: 65%;
-				flex-direction: column;
+				flex-direction: row;
 			}
 			}

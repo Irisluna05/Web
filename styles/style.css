@@ -2,32 +2,33 @@
 /* Home pagina */
 /**************/
 
- /*********************/
-  /* CUSTOM PROPERTIES */
-  /*********************/
-  :root {
-	--color-primary: light dark #1D1D1B white;
-	--color-header: #B19144;
-	--color-background:light dark #ffffff grey;
-	--global-color: light dark #F3E7D4 #1D1D1B;
-	--global-back: light dark #f8f2e9 #1D1D1B;
-	--global-color2: light dark #D4DC91 #525829 ;
-	--color-button-text:#fff;
-}
-
 body{
 	background-color: var(--global-color);
 }
 
-h1{
-    visibility: hidden;
+  
+
+  h2{
+    display: block;
+  font-family: 'IntroScriptMedium', sans-serif;
+  box-sizing: border-box;
+  color: var(--color-heading);
+  border-radius: 0 0 0 0;
+  font-size: 35px;
+  font-weight: 500;
+  height: auto;
+  line-height: 40.25px;
+  text-align: center;
+  text-transform: lowercase;
+  width: auto;
   }
   
+
   h3,h4{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--color-header)
+    color: var(--color-heading)
   }
 
 img {
@@ -202,8 +203,36 @@ section:nth-of-type(2) > article:nth-child(1) {
 		}
 	}
 
+	section:nth-of-type(3) {
+		background-color:var(--global-color2);
+		margin: 0;
+		width: 100%;
+	}	
+
+
 	section:nth-of-type(3) h2{
-		color: #6a422a
+		color: var(--color3);
+		font-family: 'MontecatiniProStrettoUltra', sans-serif;
+		font-size: 6em;
+	  }
+
+	section:nth-of-type(3) article{
+		justify-content: center;
+		align-items: center;
+	}
+
+	section:nth-of-type(3) ul:nth-of-type(2){
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		justify-content: space-between;
+
+	}
+
+	  section:nth-of-type(3) > :nth-child(3){
+		color: var(--color-heading);
+		font-family: 'IntroScriptMedium', sans-serif;
+		font-size: 3em;
 	  }
 
 	  /* Social icons*/
@@ -253,7 +282,6 @@ section:nth-of-type(2) > article:nth-child(1) {
 	}
 
 	/* Alles gecentreerd */
-
 	section:nth-of-type(3) li{
 		display: flex;
 	flex-direction: column;
@@ -261,126 +289,92 @@ section:nth-of-type(2) > article:nth-child(1) {
 	}
 
 	figure img {
-		width: 50%;
-		max-height: 70%; 
+		justify-self:center; 
+	align-self:center; 
+		width: 17em;
+		height: auto; /* Foto past zich aan */
 		background-color: var(--color-background);
 		object-fit: contain; 
 	}
 
 	
-	figure:is(:nth-of-type(1), :nth-of-type(3)) {
-		display: flex;
-		flex-direction: column;
+	figure {
+		display:grid;
 		align-items: center;
 		justify-content: center;
-		width: 400px; 
-		height: 300px;
+		width: 19em; 
+		height: 22em;
 		background-color: white; 
 		border: 1px solid #ddd;
 		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Aan chatgpt gevraagd */
-		rotate: -3deg;
+		
 	}
 
-	figure:hover{
-		rotate: 7deg;
-		transition-duration: 0.5s;
-	}
+    figure:nth-of-type(1):hover,
+figure:nth-of-type(3):hover {
+    rotate: -3deg;
+    transition-duration: 0.5s;
+}
 
-	.fotolijst2 img {
-		max-width: 90%; 
-		max-height: 70%; 
-		background-color: var(--color-background);
-		object-fit: contain; 
-	}
-	
-	figure:is(:nth-of-type(2), :nth-of-type(4)) {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		width: 400px; 
-		height: 300px;
-		background-color: var(--color-background); 
-		border: 1px solid #ddd;
-		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Aan chatgpt gevraagd */
-		rotate: 7deg;
-	}
-
-
-	/* Einde fotolijsten */
+figure:nth-of-type(2):hover,
+figure:nth-of-type(4):hover {
+    rotate: 7deg;
+    transition-duration: 0.5s;
+}
 
 		figcaption{
-			display: flex;
+			align-items: center;
 			justify-content: center;
-			justify-self: left;
 			font-size: 25px;
-			color: var(--color-header);
+			color: var(--color-heading);
 			font-family: 'IntroScriptMedium', sans-serif;
 			margin-top: 5px; /* Ruimte tussen afbeelding en tekst */
 text-align: center;
 
 		}
 
+		/* Einde fotolijsten */
 
-	section:nth-of-type(3) {
-		background-color: #D4DC91;;
-		margin: 0;
-		width: 100%;
-	}	
-
-
-
-	section:nth-of-type(3) article{
-		justify-content: center;
-		align-items: center;
-	}
-
-	section:nth-of-type(3) article p{
-		margin-top: 8%;
-	} 
-
-	section:nth-of-type(3) ul:nth-of-type(2){
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		justify-content: space-between;
-
-	}
 	
 	
-
-
 	/* Fotolijsten op een rij van 4 op de computer */
- @media (min-width: 800px) {
+ @media (min-width: 65em) {
 
 	section:nth-of-type(3) ul:nth-of-type(2){
 		display: flex;
 		flex-direction: row;
-		justify-content: space-between;
-		padding: 0;
-		margin: 0;
+		margin: 3em;
+		padding-right: 5em;
+		padding-left: 3em;
+	}
+
+	/* Kleinere li */
+	figure{
+		width: 14em;
+		height: 18em;
+	}
+
+	/* Kleinere foto */
+	figure img {
+		justify-self:center; 
+	align-self:center; 
+		width: 12em;
+		background-color: var(--color-background);
 	}
 	
 	}
 
-		
 
-footer{
-	justify-content: flex-start;
-display: flex;
-flex-direction: column;
-background-color: #c5b9ac;
-border-style: none;
-text-align: left;
+	/* kleinere tekst bij telefoon */
+	@media (max-width: 50em) {
 
-}
-
-	/* Footer contact en volg ons naast elkaar */
-	@media (min-width: 800px) {
-
-		footer{
-			display: flex;
-		}
+		section:nth-of-type(3) h2{
+			font-size: 3em;
+		  }
+	
+		  section:nth-of-type(3) > :nth-child(3){
+			font-size: 1.5em;
+		  }
 		
 		}
 

@@ -47,10 +47,7 @@ function NextButtonKlik() {
 function PrevButtonKlik() {
 
     Carousel.scrollLeft = Carousel.scrollLeft - Carousel.offsetWidth;
-  
-    if (Carousel.scrollLeft < 0) {
-      Carousel.scrollLeft = items.length * scrollAmount; // Jump to the end
-    }
+
   }
 
  
