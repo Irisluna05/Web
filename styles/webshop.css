@@ -17,8 +17,13 @@ h2{
   font-size: 2em;
   }
 
+  /*Groene achtergrond*/
+  main{
+	background-color: var( --global-color2);
+  }
 
 section:nth-of-type(1) {
+	padding:1em;
 	text-align: center;
 }
 
@@ -80,6 +85,10 @@ animation-timing-function: ease-in;
 
 /*Taarten naast elkaar*/
 
+section:nth-of-type(2){
+	background-color: var(--global-back);
+	padding-top: 1em;
+}
 
 section:nth-of-type(2) li{
 	display: flex;
@@ -88,9 +97,13 @@ section:nth-of-type(2) li{
 		text-align: center;
 		border-width: 0;
 border-style: solid;
-border-radius: 15px;
+border-radius: 2%;
 background-color: #fff;
 overflow: hidden;
+	}
+
+	section:nth-of-type(2) p{
+		color: black;
 	}
 
 	/* Hulp van Helina*/
@@ -136,11 +149,28 @@ vertical-align: middle;
 		border-color: #F6A99F;
 		}
 
+			/* kleinere tekst bij telefoon en kleinere taart */
+			@media (max-width: 65em) {
+
+				section:nth-of-type(1) h2:nth-of-type(1){
+					font-size: 6em;
+				  }
+			
+				  section:nth-of-type(1) p{
+					font-size: 2em;
+				  }
+	
+				  main section:nth-of-type(1) > img {
+					height: 15em;
+				}
+				
+				}
+
 		/* kleinere tekst bij telefoon en kleinere taart */
 		@media (max-width: 55em) {
 
 			section:nth-of-type(1) h2:nth-of-type(1){
-				font-size: 2em;
+				font-size: 3em;
 			  }
 		
 			  section:nth-of-type(1) p{
@@ -179,16 +209,27 @@ vertical-align: middle;
 			}
 		}
 		
+ /*********************/
+  /*********************/
+			/*Dialog styling*/
+			 /*********************/
+  /*********************/
 
-			/*Dialog style groot scherm, dialog verborgen*/
 
-			dialog.hide{
+  dialog{
+	display:none;
+}
+
+			dialog{
 				display: relative;
 				display: flex;
 				flex-direction: column;
 				width: 65%;
 			}
 
+			dialog p{
+				color: black;
+			}
 
 	dialog button{
 		border-style: solid;
@@ -244,9 +285,16 @@ color: var(--color-heading);
 
 			/*Stijl groter scherm*/
 			@media (width > 60em) {
-				
-			dialog{
-				width: 65%;
-				flex-direction: row;
-			}
-			}
+    dialog {
+		flex-direction: column;
+        width: 85%;
+        padding: 1em;
+		width: 20em;
+    }
+
+    dialog img:nth-of-type(2) {
+        height: 2.5em;
+        width: 2.5em;
+    }
+}
+			

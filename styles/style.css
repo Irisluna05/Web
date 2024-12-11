@@ -306,7 +306,7 @@ section:nth-of-type(2) > article:nth-child(1) {
 		height: 22em;
 		background-color: white; 
 		border: 1px solid #ddd;
-		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Aan chatgpt gevraagd */
+		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Aan chatgpt gevraagd  https://chatgpt.com/share/6756f526-db8c-800b-9127-c53f6160927b */
 		
 	}
 
@@ -333,12 +333,10 @@ text-align: center;
 
 		}
 
-		/* Einde fotolijsten */
 
 	
-	
 	/* Fotolijsten op een rij van 4 op de computer */
- @media (min-width: 65em) {
+ @media (min-width: 80em) {
 
 	section:nth-of-type(3) ul:nth-of-type(2){
 		display: flex;
@@ -364,6 +362,8 @@ text-align: center;
 	
 	}
 
+	/* Einde fotolijsten */
+
 
 	/* kleinere tekst bij telefoon */
 	@media (max-width: 50em) {
@@ -377,38 +377,6 @@ text-align: center;
 		  }
 		
 		}
-
-footer section {
-	background-color: var(--color-background);
-} 
-
-footer h3{
-	animation: bounceRight;
-	animation-duration: 2s;
-}
-
-footer ul{
-	display: inline-grid;
-	justify-content: center;
-	max-width: 20em;
-	grid-template-columns: repeat(3,1fr);
-width: 100%;
-animation: bounceRight;
-	animation-duration: 2s;
-  }
-
-
- footer ul img:hover{
-	animation-name:pop;
-	animation-duration: 1.5s;
-	animation-iteration-count: infinite;
-  }
-
-footer p{
-	color: var(--color-header);
-	text-transform: capitalize;
-
-}
 
 
 

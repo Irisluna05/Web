@@ -32,7 +32,10 @@
   --color-button-text:#fff;
   --color-p1:rgb(106, 87, 87);
   --colornav: #f8f2e9;
+  --colora: rgb(177, 145, 68);
+  --colorham: #F3E7D4;
   --color3: #6A5757;
+  --foot: #f8f2e9;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -45,10 +48,13 @@
     --global-color2: #9ba170;
     --color-p1:#ffffff;
     --colornav: rgb(204, 204, 204);
+    --colora: #1D1D1B;
+    --colorham: rgb(162, 162, 162);
     --color3: #F6A99F;
+    --foot: #8f8f8f;
   }
 
-  figure{
+  image{
     filter: brightness(0.9)
   }
 
@@ -80,7 +86,7 @@ h1{
   
   nav a{
     font-family: "Alata",Sans-serif;
-    color: rgb(177, 145, 68);
+    color: var(--colora);
     text-transform: uppercase;
     text-decoration: none;
     height: 100vh; /* Laat het menu de volledige hoogte van het scherm innemen */
@@ -134,7 +140,7 @@ nav a:focus{
       align-items: center; 
       position: sticky;
       top: 0; 
-      padding: 1em;
+      padding: 2em;
       z-index: 1000;
       background-color: var(--colornav);
     }
@@ -148,13 +154,19 @@ nav ul:nth-of-type(1) {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100vh; /* Laat het menu de volledige hoogte van het scherm innemen */
-  width: 236px; 
+  height: 100vh; /* Volledige hoogte innemen */
   translate: -100%; 
-  background-color:var(--colornav);
+  background-color:var(--colorham);
   text-transform: uppercase;
   z-index: 1000;
   transition: 0.5s ease; /* Voor een soepele overgang */
+}
+
+nav ul:nth-of-type(1) img{
+  display: block;
+ margin-bottom: 2em;
+ width: 10em;
+ padding: 1em;
 }
 
 
@@ -176,6 +188,8 @@ text-align: center;
 }
 
 footer section {
+  display: flex;
+  flex-direction: row;
 	background-color: var(--color-background);
 } 
 
@@ -235,10 +249,11 @@ details summary {
 }
 
 details ul {
-  display: flex;
-  flex-direction: column;
+  display: inline-block;
+  flex-direction: row;
   list-style: none;
   padding: 0;
+  align-items: left;
   transform: translateY(3em); /* Hierdoor staat iets naar beneden*/
 }
 
@@ -351,7 +366,7 @@ span{
 
 /*Bij een groot scherm wordt het hamburger menu weggehaald.*/
 
-    @media (min-width:65em) {
+    @media (min-width:70em) {
     
       nav {
         order:0;
@@ -361,8 +376,8 @@ span{
         display: none;
       }
     
-        button {
-          display:hidden;
+       span button {
+          display:none;
         }
         
         nav ul:nth-of-type(1) {
@@ -383,7 +398,6 @@ span{
       position:sticky;
       top:0;
       z-index:1000;
-      padding: 2em;
       margin: 0;
       background-color:var(--colornav);
     }
@@ -392,22 +406,26 @@ span{
       display: block;
   }
 
-        nav:nth-of-type(2) ul{
+  nav:nth-of-type(2) img {
+    display: block;
+}
+        nav:nth-of-type(2) ul:nth-of-type(1){
           display: flex;
+          flex-direction: row;
+          font-size: .8em;
+          gap: 1.8em;
           background-color:var(--colornav);
-          justify-content: space-between;
           flex-wrap: nowrap;
-          margin: 0%;
           font-family: Arial, sans-serif;
           translate: 0%;
+          place-self: center;
       }
   
       nav:nth-of-type(2) ul li {
         position: relative;
-        gap: 10;
         justify-content: center;
         align-items: center;
-        margin: 0;
+        margin-top: 1em;
         min-width: 100px; 
         text-align: center; 
         box-sizing: border-box;
@@ -415,15 +433,125 @@ span{
     
     }
 
-    	/* Media landscape toevoegd! */
+
+    footer {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+      background-color: var(--foot);
+    }
+  
+  
+    
+    footer h3{
+      animation: bounceRight;
+      animation-duration: 2s;
+    }
+    
+    footer ul{
+      display: inline-grid;
+      place-self: center;
+      gap: 1em;
+      max-width: 10em;
+      grid-template-columns: repeat(3,1fr);
+    animation: bounceRight;
+      animation-duration: 2s;
+      }
+    
+    
+     footer ul img:hover{
+      animation-name:pop;
+      animation-duration: 1.5s;
+      animation-iteration-count: infinite;
+      }
+    
+    footer p{
+      display: flex;
+      color: var(--color-header);
+      text-transform: capitalize;
+      place-self: center;
+    }    
+ 
+footer section{
+  background-color: white;
+}
+  footer h2{
+    
+    animation: bounceRight;
+    animation-duration: 2s;
+    font-family: 'MontecatiniProStrettoUltra';
+  }
+  
+  footer h3{
+    animation: bounceRight;
+    animation-duration: 2s;
+    font-family: 'MontecatiniProStrettoUltra';
+  }
+
+  footer h4{
+    display: none;
+  }
+
+  footer img:nth-of-type(4){
+    display: block;
+  }
+  
+  @keyframes bounceRight {
+    0% {opacity: 0; 
+      transform: translateX(100%);}
+  
+    40% { opacity: 1; 
+      transform: translateX(-10px);}
+  
+    80% { transform: translateX(10px);}
+  
+    100% {transform: translateX(0);}
+    }
+
+    footer ul img:hover{
+      animation-name:pop;
+      animation-duration: 1.5s;
+      animation-iteration-count: infinite;
+      }
+
+  
+    @keyframes pop{
+      0% {
+        transform: scale(1.2);
+        }
+        50% {
+        transform: scale(1);
+        }
+        100% {
+        transform: scale(1.2);
+        }
+      }
+  
+     
+  
+  
+  
+  
+
+
+ 
+
+   
+    
+
+    	/* Media landscape toevoegd! 
       @media (orientation: landscape) and (max-width: 20em){
         body {
           font-size: 1em;
+          width: 70%;
         }
 
         p{
           text-align: left;
         }
 
-      }
+      } */
+
+    
 
