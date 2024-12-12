@@ -22,7 +22,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
  Rood
 
   #### Je focus:
-  Surface laag, animaties
+  Responsive
  
 </details>
 
@@ -117,12 +117,9 @@ Wat ik wou verbeteren is dat elementen in het midden gingen staan binnen de grid
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
-
+  Joost: vragen over tekst over een foto laten lopen, px en em verhouding
+  Luna: Align items en justify items en elementen selecteren
+  Iris: Binnen een grid afbeeldingen centreren
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
@@ -157,20 +154,16 @@ Ik wil mijn header verbeteren en mijn hamburgermenu van kleur laten veranderen o
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
-
+  Luna: Vragen over animatie, grid en responsive footer
+  Alycia: zoekbalk verplaatsen en grid
+  Iris: Dropdown vragen en hamburgermenu kleur vragen
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
+  - Hoe grid werkt in een menu
+  - Hoe ik items in het hamburgermenu kan positioneren
+  - Hoe ik een dark en lightmode mooi kan verwerken
 
 </details>
 
@@ -186,6 +179,12 @@ Ik wil mijn header verbeteren en mijn hamburgermenu van kleur laten veranderen o
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
 
+  -Ik heb de tekstomschrijving veranderd geen vage verwijzingen.
+  -Geen foutmeldingen in de website.
+  -Goed leesbare tekst voor iedereen.
+  -De website heeft nu een darkmode wat fijn is voor de gebruiker.
+
+
 </details>
 
 
@@ -197,27 +196,31 @@ Ik wil mijn header verbeteren en mijn hamburgermenu van kleur laten veranderen o
 <details>
   <summary>uitwerken voor 3<sup>e</sup> voortgang</summary>
 
+
+
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+
+  Ik heb een pop-up toegevoegd aan mijn webshop pagina, ik heb dit nog nooit eerder toegepast dus ik heb een video gevolgd om deze toe te voegen.
+Ik moet de pop-up wel nog goed stylen voor een computer formaat.
+  <img src="readme-images/pop-up stylen.png" width="375px" alt="pop-up">
 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+Luna: thema slideshow vraag
+Joost: svg path maken en stop en start knop van een video
+  Iris: Hoe kan ik een dialog goed stylen?
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Hamburgermenu weer zichtbaar.
+  - Lettertypes goed overgenomen in de website, het werkt nu ook buiten VScode.
+  - Ik zou een div kunnen toevoegen voor het kruisje binnen de dialog.
+
 
 </details>
 
@@ -231,23 +234,36 @@ Ik wil mijn header verbeteren en mijn hamburgermenu van kleur laten veranderen o
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
-
+  <img src="readme-images/hammie.png" width="375px" alt="hamburgermenu">
+<img src="readme-images/pretty.png" width="375px" alt="layout">
 
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatjes
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+Wat goed ging was de lay-out overnemen van De Hoop website, ook kon ik de animaties goed verwerken zoals bij de social icons en de catogorieën.
+Ik ben ook erg trots dat de slider in de website zit, ik wist de basis te verwerken maar voor het JS deel heb ik hulp gekregen.
 
+Het is ook niet perfect nagemaakt maar ik heb zeker weer nieuwe dingen geleerd en veel tijd besteed aan het coderen van deze website. De opdrachten in de les hebben mij ook goed geholpen.
+  <img src="readme-images/hover.png" width="375px" alt="animaties">
+
+Ik ben ook erg trots op de webshop pagina, hier heb ik met grid gewerkt om alle onderdelen mooi responsive te krijgen!
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+  Ik merkte dat het positioneren van sommige onderdelen nog best moeilijk ging, zoals bij de fotolijsten die de pagina kapot maakte als ze naast elkaar moesten staan.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  Het is mij uiteindelijk wel gelukt ze netjes naast elkaar te krijgen op een groot scherm en bij kleine schermen zie je dan 1 fotolijst
+
+  Dit was de eerste keer dat ik een hamburgermenu in een website had toegevoegd, het stylen hiervan ging daarom helaas ook lastig. Gelukkig is het gelukt met 100% vw om het hamburgermenu over de hele breedte te laten lopen.
+
+
+  <img src="readme-images/pop-upt.png" width="375px" alt="pop-up">
+
+  Om bij de pop-up het kruisje helemaal rechtsboven alle content te krijgen zou ik volgens de student assistenten een div moeten gebruiken, ik heb er toen voor gekozen het op een andere manier op te lossen en ben trots op de indeling van de pop-up op mobiel scherm.
+
+  Ook bleef de pop-up heel raar onderin het scherm staan, ik heb meerdere keren geprobeerd deze weg te halen maar dit was niet gelukt.
+
+
 </details>
-
-
-
 
 
 ## Bronnenlijst
@@ -259,8 +275,15 @@ Ik wil mijn header verbeteren en mijn hamburgermenu van kleur laten veranderen o
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  Mijn bronnen heb ik in mijn code verwerkt maar hier staan er nog een paar in een rijtje:
+
+https://www.youtube.com/watch?v=br-0i3U1VCA 
+https://chatgpt.com/share/6756f526-db8c-800b-9127-c53f6160927b 
+https://chatgpt.com/share/67571733-48f4-800b-a028-c440eae0fb38
+https://www.w3schools.com/cssref/css3_pr_animation-timing-function.php
+Sanne
+Helina Kim
+Studentassistent
+
 
 </details>
