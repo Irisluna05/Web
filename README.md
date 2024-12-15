@@ -286,7 +286,17 @@ Joost: svg path maken en stop en start knop van een video
 
   ### Je uitkomst - karakteristiek screenshots:
   <img src="readme-images/hammie.png" width="375px" alt="hamburgermenu">
+Dit was het hamburgermenu die nog styling nodig had, zo stond hij nog niet goed naar links en miste ook het logo nog bovenin.
+
+  <img src="readme-images/hamb.png" width="375px" alt="hamburgermenu">
+  Nu is het hamburgermenu af! Het logo van De Hoop staat bovenin en de list-items netjes onder elkaar.
+
 <img src="readme-images/pretty.png" width="375px" alt="layout">
+De elementen staan mooi uitgelijnd naast elkaar
+
+
+<img src="readme-images/webs.png" width="375px" alt="webshop pagina">
+Dit is een schermafbeelding van de webshop pagina, ook op kleiner formaat staat de tekst goed op beeld. De tekst schuift langzaam naar binnen met een animatie.
 
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatjes
