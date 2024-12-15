@@ -2,7 +2,22 @@
 /* Webshop pagina */
 /**************/
 
-h2{
+h1{
+    display: block;
+  font-family: 'MontecatiniProStrettoUltra', sans-serif;
+  box-sizing: border-box;
+  color: var(--color-heading);
+  border-radius: 0 0 0 0;
+  font-weight: 500;
+  height: auto;
+  line-height: 40.25px;
+  text-align: center;
+  text-transform: lowercase;
+  width: auto;
+  font-size: 8em;
+  }
+
+  h2{
     display: block;
   font-family: 'MontecatiniProStrettoUltra', sans-serif;
   box-sizing: border-box;
@@ -152,7 +167,7 @@ vertical-align: middle;
 			/* kleinere tekst bij telefoon en kleinere taart */
 			@media (max-width: 65em) {
 
-				section:nth-of-type(1) h2:nth-of-type(1){
+				section:nth-of-type(1) h1 {
 					font-size: 6em;
 				  }
 			
@@ -169,7 +184,7 @@ vertical-align: middle;
 		/* kleinere tekst bij telefoon en kleinere taart */
 		@media (max-width: 55em) {
 
-			section:nth-of-type(1) h2:nth-of-type(1){
+			section:nth-of-type(1) h1{
 				font-size: 3em;
 			  }
 		

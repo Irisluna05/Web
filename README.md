@@ -58,7 +58,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
 
-  Voiceover
+Ik kan de links in de website overslaan door skip links, nog niet alles wordt goed beschreven zo hoor ik op de voiceover afbeelding2550 maar niet wat er op de afbeelding wordt weergegeven.
+
+Ik kan de voiceover met pijltjes besturen en de control, option command met een pijltje gebruiken om te springen naar links of headings in de website.
+
+
+<img src="readme-images/vertel.jpg" width="375px" alt="Snelheid aanpassen">
+<img src="readme-images/vertel2.jpg" width="375px" alt="Link verteller">
 
   -Duidelijke omschrijving van de website bij de voiceover.
   -Bij links werden verteld dat deze klikbaar waren.
@@ -66,9 +72,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   -Er is een draaiknop waarmee je makkelijk naar 1 deel van de website kan springen.
   -Best wel wat waarschuwingen in de website.
 
-<img src="readme-images/vertel.jpg" width="375px" alt="Snelheid aanpassen">
-<img src="readme-images/vertel2.jpg" width="375px" alt="Link verteller">
 
+De website heeft in de validator best nog wel wat errors en waarschuwingen, dit komt omdat er inline style elementen worden gebruikt en ook omdat er sommige elementen niet goed worden genest.
+
+<img src="readme-images/IMG_4446.jpg" width="375px" alt="validator1">
+<img src="readme-images/IMG_4447.jpg" width="375px" alt="validotor2">
 
   
 
@@ -151,6 +159,7 @@ Wat ik wou verbeteren is dat elementen in het midden gingen staan binnen de grid
 <img src="readme-images/dropdown.png" width="375px" alt="dropdown header">
 
 Ik wil mijn header verbeteren en mijn hamburgermenu van kleur laten veranderen ook moet ik nog een deel van de homepagina responsive maken.
+
   ### Agenda voor meeting
   samen met je groepje opstellen
 
@@ -177,12 +186,40 @@ Ik wil mijn header verbeteren en mijn hamburgermenu van kleur laten veranderen o
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+  Lijst met je bevindingen die in de test naar voren kwamen:
 
-  -Ik heb de tekstomschrijving veranderd geen vage verwijzingen.
+De Hoop website:
+
+De eerste kop op de home pagina is een h3 dit is van het stukje volg ons, de heading volgorde is dus niet goed op deze website.
+
+Het is niet duidelijk waar een link je naartoe brengt.
+
+Mijn website:
+
+Bij mijn website werd eerst de H1 niet voorgelezen omdat hij ook voor de schermlezer was verstopt, door de class visually hidden toe te voegen werd hij wel gewoon voorgelezen.
+
+Alle afbeeldingen op de website waren ook duidelijk omschreven en de aria labels zorgt voor een goede omschrijving van de links.
+
+
+<img src="readme-images/kop.png" width="375px" alt="headers">
+
+De tekst van een link bij De Hoop website geeft maar weinig informatie, er staat alleen "lees meer" en niet naar welke pagina je kan gaan.
+
+  Verbeteringen:
+
+-Logische heading volgorde, de website heeft in de header een h1 en daarna per sectie weer een h2.
+  -Ik heb de tekstomschrijving veranderd ipv lees meer bijvoorbeeld ijskarren huren, dan weet de gebruiker wat deze kan verwachten.
   -Geen foutmeldingen in de website.
   -Goed leesbare tekst voor iedereen.
   -De website heeft nu een darkmode wat fijn is voor de gebruiker.
+  -Ik heb aria-labels toegevoegd zodat links duidelijker zijn.
+  -De h1 heeft nu een class waardoor deze niet te zien is maar wel door de schermlezer wordt voorgelezen.
+
+<img src="readme-images/h1_web.png" width="375px" alt="dropdown header">
+
+<img src="readme-images/aria label.png" width="375px" alt="dropdown header">
+   
+
 
 
 </details>
@@ -261,6 +298,10 @@ Ik ben ook erg trots op de webshop pagina, hier heb ik met grid gewerkt om alle 
   Om bij de pop-up het kruisje helemaal rechtsboven alle content te krijgen zou ik volgens de student assistenten een div moeten gebruiken, ik heb er toen voor gekozen het op een andere manier op te lossen en ben trots op de indeling van de pop-up op mobiel scherm.
 
   Ook bleef de pop-up heel raar onderin het scherm staan, ik heb meerdere keren geprobeerd deze weg te halen maar dit was niet gelukt.
+
+  ### Feedback:
+
+  Verbeter je WCAG check en vul deze aan, de h1 werd niet door de schermlezer voorgelezen ook had ik nog niet bij alle links/buttons aria labels toegevoegd waardoor alleen de tekst werd voorgelezen. Door de aanpassingen is de website ook duidelijk voor iemand die een schermlezer gebruikt.
 
 
 </details>
