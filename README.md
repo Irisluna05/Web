@@ -202,7 +202,9 @@ De Hoop website:
 
 De eerste kop op de home pagina is een h3 dit is van het stukje volg ons, de heading volgorde is dus niet goed op deze website.
 
-Het is niet duidelijk waar een link je naartoe brengt.
+<img src="readme-images/kop.png" width="375px" alt="headers">
+
+Het is niet duidelijk waar een link je naartoe brengt. De tekst van een link bij De Hoop website geeft maar weinig informatie, er staat alleen "lees meer" en niet naar welke pagina je kan gaan.
 
 Mijn website:
 
@@ -210,10 +212,11 @@ Bij mijn website werd eerst de H1 niet voorgelezen omdat hij ook voor de scherml
 
 Alle afbeeldingen op de website waren ook duidelijk omschreven en de aria labels zorgt voor een goede omschrijving van de links.
 
+Toen ik mijn website in de w3c validator had gestopt kwam ik erachter dat sommige html elementen nog niet goed waren afgesloten, deze errors had ik niet eerder binnen Vscode gezien. Ik ben toen de errors langs gegaan en heb deze opgelost.
 
-<img src="readme-images/kop.png" width="375px" alt="headers">
+<img src="readme-images/error2.png" width="375px" alt="headers">
 
-De tekst van een link bij De Hoop website geeft maar weinig informatie, er staat alleen "lees meer" en niet naar welke pagina je kan gaan.
+
 
   Verbeteringen:
 
@@ -224,6 +227,7 @@ De tekst van een link bij De Hoop website geeft maar weinig informatie, er staat
   -De website heeft nu een darkmode wat fijn is voor de gebruiker.
   -Ik heb aria-labels toegevoegd zodat links duidelijker zijn.
   -De h1 heeft nu een class waardoor deze niet te zien is maar wel door de schermlezer wordt voorgelezen.
+  -Alle elementen zijn goed afgesloten waardoor er geen errors in de html staan.
 
 <img src="readme-images/h1_web.png" width="375px" alt="dropdown header">
 
