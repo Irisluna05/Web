@@ -38,13 +38,23 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Je opdracht:
   link naar de website die je gaat namaken of de naam/omschrijving van je eigen ontwerp
 
+ Eerst had ik de website van Riviera Maison in mijn hoofd maar dit was toch een enorm grote website, ook als je dan door het menu heen hovert kwamen er heel veel opties. Daarom ben ik voor een kleinere winkel gaan zoeken.
+
+ Ik dacht toen aan Miniso of de website van Ijssalon De Hoop en deze vond ik erg leuk dus daarom heb ik daarvoor gekozen.
+
+  Ik ga de website van Ijssalon De Hoop namaken, deze website is erg mooi met een uniek lettertype ook zit er voor mij genoeg uitdaging in!
+
+  <a href="https://www.ijssalondehoop.nl/home/">Ijssalon De Hoop</a>
+
   #### Screenshot(s) van de eerste pagina (small screen): 
   Home pagina
   <img src="readme-images/IMG_4212.jpg" width="375px" alt="Homepagina">
+  De homepagina bevat een foto slider, ik ben beniewd of ik deze ook even mooi kan maken. In de home pagina zitten ook hele leuke css animaties deze wil ik ook verwerken want dat geeft een speels element. Ook word er een hamburger menu gebruikt die van streepjes naar een kruis veranderd dit is zeker interessant om mij in te verdiepen.
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  Duurzaam pagina  
-  <img src="readme-images/IMG_4213.jpg" width="375px" alt="Duurzaam pagina">
+  Webshop pagina  
+  <img src="readme-images/webso.jpg" width="375px" alt="Duurzaam pagina">
+  Bij de kleine pagina van de webshop loopt er tekst van het scherm af, dit wil ik in mijn versie wel gewoon netjes op de pagina hebben staan. De uitdaging van deze pagina is een grid gebruiken voor de taarten en een pop-up maken als hierop word geklikt.
  
 </details>
 
